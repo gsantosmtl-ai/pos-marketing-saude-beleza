@@ -84,36 +84,41 @@ li:last-child{margin-bottom:0}
 @media (max-width:1040px){.topnav{display:none}}
 
 /* ---------------- hero ---------------- */
-.hero{padding:clamp(56px,10vw,120px) 0 clamp(40px,6vw,72px)}
-.hero .d1{margin:0 0 26px}
-.hero .lede{max-width:34ch}
-.hero-grid{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:clamp(32px,5vw,70px); align-items:start}
-.hero-figure{margin:0; width:clamp(240px,32vw,380px)}
-.hero-figure img{width:100%; aspect-ratio:4/5; object-fit:cover; object-position:34% 38%}
+.hero-sec{padding:0 0 clamp(40px,6vw,72px); border-top:0}
+.hero-full{
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(300px,42%);
+  gap:clamp(28px,4vw,64px); align-items:stretch;
+  padding-left:max(var(--pad), calc((100% - 1240px) / 2 + var(--pad)));
+}
+.hero-text{padding:clamp(44px,6.5vw,92px) 0 clamp(30px,4vw,54px)}
+.hero-text .d1{margin:0 0 26px}
+.hero-text .lede{max-width:34ch}
+.hero-figure{margin:0; min-height:clamp(400px,54vw,640px); background:var(--wash)}
+.hero-figure img{width:100%; height:100%; object-fit:cover; object-position:38% 30%}
 .hero-words{
   font-size:10.5px; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
   color:var(--gold); margin:0 0 26px;
 }
-.hero-side{
-  text-align:right; font-size:10.5px; font-weight:600; letter-spacing:.2em;
-  text-transform:uppercase; color:var(--muted); line-height:2.5; padding-top:8px;
-}
-@media (max-width:820px){
-  .hero-grid{grid-template-columns:1fr}
-  .hero-side{display:none}
-  .hero-figure{width:100%; max-width:420px}
-  .hero-figure img{aspect-ratio:3/2; object-position:34% 34%}
-}
 .goldrule{width:68px; height:1px; background:var(--gold); margin:34px 0}
-.recipient{
-  font-size:.92rem; color:var(--muted); max-width:46ch;
-}
+.recipient{font-size:.92rem; color:var(--muted); max-width:46ch}
 .recipient b{color:var(--green); font-weight:600}
+@media (max-width:900px){
+  .hero-full{
+    grid-template-columns:1fr; gap:0;
+    padding-left:var(--pad); padding-right:var(--pad);
+  }
+  .hero-text{padding:36px 0 30px}
+  .hero-figure{
+    min-height:0; order:-1;
+    margin:0 calc(var(--pad) * -1);
+  }
+  .hero-figure img{height:auto; aspect-ratio:16/10; object-position:38% 26%}
+}
 
 /* ---------------- spec strip ---------------- */
 .spec{
   display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-  border-top:1px solid var(--rule); margin-top:clamp(40px,6vw,70px);
+  border-top:1px solid var(--rule); margin-top:clamp(28px,4vw,52px);
 }
 .spec div{padding:24px 26px 24px 0; border-right:1px solid var(--hair)}
 .spec div:last-child{border-right:0}
@@ -316,10 +321,9 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .55s cubic-bezier
 <span class="brandline">Proposta acadêmica <span>·</span> Faculdade IEPG</span>
 <nav class="topnav" aria-label="Seções da proposta"><a href="#oportunidade">Oportunidade</a><a href="#justificativa">Justificativa</a><a href="#sinergia">Sinergia</a><a href="#conceito">Conceito</a><a href="#publico">Público-alvo</a><a href="#matriz">Matriz curricular</a></nav></div></header>
 <main>
-<section class="sec" id="abertura" style="border-top:0"><div class="wrap">
-<div class="hero">
-<div class="hero-grid">
-<div>
+<section class="sec hero-sec" id="abertura">
+<div class="hero-full">
+<div class="hero-text">
 <span class="secno">01</span>
 <span class="eyebrow">Proposta de pós-graduação <em>lato sensu</em></span>
 <h1 class="d1">Marketing em<br>Saúde e Beleza</h1>
@@ -330,15 +334,14 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .55s cubic-bezier
 </div>
 <figure class="hero-figure rise" hidden data-src="img/00-hero.jpg"><img alt="Profissional de jaleco branco em clínica de estética, ao lado de frascos de cosméticos e vidraria de laboratório"></figure>
 </div>
-
-<dl class="spec">
+<div class="wrap"><dl class="spec">
 <div><dt>Duração</dt><dd>12 <small>meses, em doze módulos mensais</small></dd></div>
 <div><dt>Carga horária</dt><dd>400 h <small>360 h em módulos e 40 h de Projeto Aplicado</small></dd></div>
 <div><dt>Modalidade</dt><dd>Online <small>ao vivo, com encontros de sexta a domingo</small></dd></div>
 <div><dt>Por módulo</dt><dd>30 h <small>16 h síncronas e 14 h assíncronas</small></dd></div>
 <div><dt>Encerramento</dt><dd>Summit <small>evento online com banca de avaliação</small></dd></div>
-</dl>
-</div></div></section>
+</dl></div>
+</section>
 <figure class="plate rise" hidden data-src="img/01-abertura.jpg"><img alt="Bancada de laboratório com vidraria, frascos de cosméticos e microscópio"><figcaption>Imagem ilustrativa. Pode ser substituída por fotografia institucional da Faculdade IEPG.</figcaption></figure>
 <section class="sec " id="oportunidade"><div class="wrap"><div class="sec-grid">
 <div class="sec-head rise sticky-head">
