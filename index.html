@@ -87,12 +87,23 @@ li:last-child{margin-bottom:0}
 .hero{padding:clamp(56px,10vw,120px) 0 clamp(40px,6vw,72px)}
 .hero .d1{margin:0 0 26px}
 .hero .lede{max-width:34ch}
-.hero-grid{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:48px; align-items:start}
+.hero-grid{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:clamp(32px,5vw,70px); align-items:start}
+.hero-figure{margin:0; width:clamp(240px,32vw,380px)}
+.hero-figure img{width:100%; aspect-ratio:4/5; object-fit:cover; object-position:34% 38%}
+.hero-words{
+  font-size:10.5px; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 26px;
+}
 .hero-side{
   text-align:right; font-size:10.5px; font-weight:600; letter-spacing:.2em;
   text-transform:uppercase; color:var(--muted); line-height:2.5; padding-top:8px;
 }
-@media (max-width:820px){.hero-grid{grid-template-columns:1fr} .hero-side{display:none}}
+@media (max-width:820px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-side{display:none}
+  .hero-figure{width:100%; max-width:420px}
+  .hero-figure img{aspect-ratio:3/2; object-position:34% 34%}
+}
 .goldrule{width:68px; height:1px; background:var(--gold); margin:34px 0}
 .recipient{
   font-size:.92rem; color:var(--muted); max-width:46ch;
@@ -271,7 +282,7 @@ details.mod[open] .mod-ttl{color:var(--gold)}
 
 /* ---------------- plates (optional imagery) ---------------- */
 .plate{margin:0; padding:0}
-.plate img{width:100%; height:clamp(220px,34vw,440px); object-fit:cover}
+.plate img{width:100%; height:auto}
 .plate figcaption{font-size:.82rem; color:var(--muted); padding:12px var(--pad) 0; max-width:var(--maxw); margin:0 auto}
 
 /* ---------------- close ---------------- */
@@ -313,9 +324,10 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .55s cubic-bezier
 <h1 class="d1">Marketing em<br>Saúde e Beleza</h1>
 <p class="lede">Uma nova especialização para conectar ciência, gestão e crescimento de negócios.</p>
 <div class="goldrule"></div>
+<p class="hero-words">Saúde · Beleza · Ciência · Estratégia · Negócios</p>
 <p class="recipient">Documento de trabalho apresentado à direção da <b>Faculdade IEPG</b> para avaliação da criação do curso. A proposta encontra-se em estágio de projeto: não há, nesta data, aprovação institucional, credenciamento específico ou corpo docente contratado.</p>
 </div>
-<div class="hero-side">Saúde<br>Beleza<br>Ciência<br>Estratégia<br>Negócios</div>
+<figure class="hero-figure rise" hidden data-src="img/00-hero.jpg"><img alt="Profissional de jaleco branco em clínica de estética, ao lado de frascos de cosméticos e vidraria de laboratório"></figure>
 </div>
 
 <dl class="spec">
@@ -387,7 +399,6 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .55s cubic-bezier
 <h3 class="block-h" style="margin-top:46px">Possibilidades de atuação do egresso</h3>
 <div class="chips"><span class="chip">Clínica e consultório próprios</span><span class="chip">Gestão de marketing em clínicas e redes</span><span class="chip">Farmácia magistral e de manipulação</span><span class="chip">Indústria cosmética e terceiristas</span><span class="chip">Distribuição e varejo do setor</span><span class="chip">Consultoria e docência em áreas correlatas</span></div>
 <p class="src">O ingresso observa os critérios aplicáveis aos cursos de pós-graduação <em>lato sensu</em> e as normas internas da instituição, a serem definidos pela coordenação acadêmica.</p></div></div></div></section>
-<figure class="plate rise" hidden data-src="img/02-publico.jpg"><img alt="Profissional de jaleco branco em clínica, ao lado de frascos de cosméticos e vidraria de laboratório"><figcaption>Imagem ilustrativa, sem vínculo com alunos ou docentes da instituição.</figcaption></figure>
 <section class="sec " id="diferenciais"><div class="wrap"><div class="sec-grid">
 <div class="sec-head rise sticky-head">
 <span class="secno">07</span><h2 class="d2">Diferenciais e competências desenvolvidas</h2>
@@ -543,7 +554,7 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .55s cubic-bezier
   }
 
   // optional imagery: a plate appears only when its file exists
-  [].slice.call(document.querySelectorAll('.plate[data-src]')).forEach(function(fig){
+  [].slice.call(document.querySelectorAll('[data-src]')).forEach(function(fig){
     var img = fig.querySelector('img'); if (!img) return;
     img.addEventListener('load', function(){ fig.hidden = false; });
     img.addEventListener('error', function(){ fig.remove(); });
