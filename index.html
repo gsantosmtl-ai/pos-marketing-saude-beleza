@@ -281,6 +281,11 @@ details.mod[open] .mod-ttl{color:var(--gold)}
   counter-increment:s; content:"0" counter(s);
   font-family:var(--disp); font-size:1.25rem; color:var(--gold2); font-variant-numeric:tabular-nums;
 }
+.steps > li > *{grid-column:2}
+@media (max-width:620px){
+  .steps > li{grid-template-columns:1fr; gap:10px}
+  .steps > li > *{grid-column:1}
+}
 .steps h4{font-family:var(--disp); font-weight:400; font-size:1.18rem; margin-bottom:9px; line-height:1.25}
 .steps p{font-size:.93rem; margin:0}
 .steps p + p{margin-top:.7em}
