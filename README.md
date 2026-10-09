@@ -13,7 +13,8 @@ Para adicionar, basta colocar o arquivo em `img/` com o nome exato:
 
 | Arquivo | Onde aparece | Proporcao sugerida |
 |---|---|---|
-| `img/01-abertura.jpg` | Logo abaixo da abertura, em faixa larga | 16:6, minimo 2000 px de largura |
+| `img/01-abertura.jpg` | Abaixo da abertura | 16:9, 1800 px de largura |
+| `img/02-publico.jpg` | Antes da secao de diferenciais | 16:9, 1800 px de largura |
 
 ## Estrutura
 

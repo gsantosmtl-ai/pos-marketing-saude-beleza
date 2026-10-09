@@ -67,21 +67,21 @@ li:last-child{margin-bottom:0}
 }
 .topbar-in{
   max-width:var(--maxw); margin:0 auto; padding:14px var(--pad);
-  display:flex; align-items:center; gap:24px;
+  display:flex; align-items:center; gap:24px; min-width:0;
 }
 .brandline{
   font-size:10.5px; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
   color:var(--green); white-space:nowrap;
 }
 .brandline span{color:var(--gold)}
-.topnav{display:flex; gap:26px; margin-left:auto}
+.topnav{display:flex; gap:22px; margin-left:auto; flex-wrap:nowrap}
 .topnav a{
   font-size:11.5px; font-weight:500; letter-spacing:.09em; text-transform:uppercase;
-  color:var(--muted); text-decoration:none; padding:4px 0;
+  color:var(--muted); text-decoration:none; padding:4px 0; white-space:nowrap;
   border-bottom:1px solid transparent; transition:color .2s, border-color .2s;
 }
 .topnav a:hover,.topnav a:focus-visible{color:var(--green); border-bottom-color:var(--gold2)}
-@media (max-width:900px){.topnav{display:none}}
+@media (max-width:1040px){.topnav{display:none}}
 
 /* ---------------- hero ---------------- */
 .hero{padding:clamp(56px,10vw,120px) 0 clamp(40px,6vw,72px)}
@@ -288,7 +288,7 @@ footer p{font-size:.82rem; color:var(--muted); margin:0 0 .5em; line-height:1.7}
 /* ---------------- motion ---------------- */
 .rise{opacity:1; transform:none}
 html.js .rise{opacity:0; transform:translateY(14px)}
-html.js .rise.in{opacity:1; transform:none; transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1)}
+html.js .rise.in{opacity:1; transform:none; transition:opacity .55s cubic-bezier(.22,.61,.36,1), transform .55s cubic-bezier(.22,.61,.36,1)}
 @media (prefers-reduced-motion:reduce){
   html.js .rise{opacity:1; transform:none; transition:none}
 }
@@ -298,15 +298,7 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .7s cubic-bezier(
 <body>
 <header class="topbar"><div class="topbar-in">
 <span class="brandline">Proposta acadêmica <span>·</span> Faculdade IEPG</span>
-<nav class="topnav" aria-label="Seções da proposta">
-<a href="#oportunidade">Oportunidade</a>
-<a href="#sinergia">Sinergia</a>
-<a href="#conceito">Conceito</a>
-<a href="#matriz">Matriz curricular</a>
-<a href="#metodologia">Metodologia</a>
-<a href="#implantacao">Implantação</a>
-<a href="#proximos">Próximos passos</a>
-</nav></div></header>
+<nav class="topnav" aria-label="Seções da proposta"><a href="#oportunidade">Oportunidade</a><a href="#sinergia">Sinergia</a><a href="#matriz">Matriz curricular</a><a href="#metodologia">Metodologia</a><a href="#proximos">Próximos passos</a></nav></div></header>
 <main>
 <section class="sec" id="abertura" style="border-top:0"><div class="wrap">
 <div class="hero">
@@ -330,7 +322,7 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .7s cubic-bezier(
 <div><dt>Encerramento</dt><dd>Summit <small>evento online com banca de avaliação</small></dd></div>
 </dl>
 </div></div></section>
-<figure class="plate rise" hidden data-src="img/01-abertura.jpg"><img alt="Bancada de laboratório com vidraria, frascos de cosméticos e microscópio"><figcaption>Imagem ilustrativa. Substituir por fotografia institucional da Faculdade IEPG quando disponível.</figcaption></figure>
+<figure class="plate rise" hidden data-src="img/01-abertura.jpg"><img alt="Bancada de laboratório com vidraria, frascos de cosméticos e microscópio"><figcaption>Imagem ilustrativa. Pode ser substituída por fotografia institucional da Faculdade IEPG.</figcaption></figure>
 <section class="sec " id="oportunidade"><div class="wrap"><div class="sec-grid">
 <div class="sec-head rise sticky-head">
 <span class="secno">02</span><h2 class="d2">Oportunidade estratégica para a Faculdade&nbsp;IEPG</h2>
@@ -391,6 +383,7 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .7s cubic-bezier(
 <h3 class="block-h" style="margin-top:46px">Possibilidades de atuação do egresso</h3>
 <div class="chips"><span class="chip">Clínica e consultório próprios</span><span class="chip">Gestão de marketing em clínicas e redes</span><span class="chip">Farmácia magistral e de manipulação</span><span class="chip">Indústria cosmética e terceiristas</span><span class="chip">Distribuição e varejo do setor</span><span class="chip">Consultoria e docência em áreas correlatas</span></div>
 <p class="src">O ingresso observa os critérios aplicáveis aos cursos de pós-graduação <em>lato sensu</em> e as normas internas da instituição, a serem definidos pela coordenação acadêmica.</p></div></div></div></section>
+<figure class="plate rise" hidden data-src="img/02-publico.jpg"><img alt="Profissional de jaleco branco em clínica, ao lado de frascos de cosméticos e vidraria de laboratório"><figcaption>Imagem ilustrativa, sem vínculo com alunos ou docentes da instituição.</figcaption></figure>
 <section class="sec " id="diferenciais"><div class="wrap"><div class="sec-grid">
 <div class="sec-head rise sticky-head">
 <span class="secno">07</span><h2 class="d2">Diferenciais e competências desenvolvidas</h2>
@@ -516,9 +509,14 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .7s cubic-bezier(
       entries.forEach(function(e){
         if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
-    rise.forEach(function(el){ io.observe(el); });
-    setTimeout(showAll, 2500);
+    }, { rootMargin: '140px 0px -4% 0px', threshold: 0 });
+    // anything already within (or near) the first screen shows at once
+    var vh = window.innerHeight || 800;
+    rise.forEach(function(el){
+      if (el.getBoundingClientRect().top < vh * 1.15) el.classList.add('in');
+      else io.observe(el);
+    });
+    setTimeout(showAll, 1200);
   }
 
   // expand / collapse every module
