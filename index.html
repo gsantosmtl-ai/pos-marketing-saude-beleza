@@ -296,19 +296,13 @@ details.mod[open] .mod-ttl{color:var(--gold)}
 .plate img{width:100%; height:auto}
 .plate figcaption{font-size:.82rem; color:var(--muted); padding:12px var(--pad) 0; max-width:var(--maxw); margin:0 auto}
 
-/* ---------------- close ---------------- */
-.close{background:var(--green); color:#DCE5E0; padding:clamp(56px,8vw,104px) 0}
-.close .d2,.close h3{color:var(--paper)}
-.close .eyebrow{color:var(--gold2)}
-.close .secno{color:var(--gold2)}
-.close p{color:#C3D0CA}
-.close strong{color:var(--paper)}
-.close .steps > li{border-bottom-color:rgba(255,255,255,.13)}
-.close .steps > li::before{color:var(--gold2)}
-.close .steps h4{color:var(--paper)}
-.close .goldrule{background:var(--gold2)}
-
-.sec.last{padding-bottom:clamp(64px,9vw,120px)}
+/* ---------------- encerramento ---------------- */
+.sec.final{background:var(--wash); border-top:1px solid var(--rule)}
+.sec.final .sec-head .d2{color:var(--green)}
+.sec.final .steps > li{border-bottom-color:var(--rule)}
+.sec.final .steps > li:last-child{border-bottom:0}
+.sec.final .note{background:var(--white); border-color:var(--rule)}
+.sec.last{padding-bottom:clamp(56px,8vw,96px)}
 footer{padding:40px 0 64px; border-top:1px solid var(--hair)}
 footer p{font-size:.82rem; color:var(--muted); margin:0 0 .5em; line-height:1.7}
 
@@ -325,7 +319,7 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .55s cubic-bezier
 <body>
 <header class="topbar"><div class="topbar-in">
 <span class="brandline">Proposta acadêmica <span>·</span> Faculdade IEPG</span>
-<nav class="topnav" aria-label="Seções da proposta"><a href="#oportunidade">Oportunidade</a><a href="#justificativa">Justificativa</a><a href="#sinergia">Sinergia</a><a href="#conceito">Conceito</a><a href="#publico">Público-alvo</a><a href="#matriz">Matriz curricular</a></nav></div></header>
+<nav class="topnav" aria-label="Seções da proposta"><a href="#oportunidade">Oportunidade</a><a href="#sinergia">Sinergia</a><a href="#conceito">Conceito</a><a href="#publico">Público</a><a href="#matriz">Matriz curricular</a><a href="#metodologia">Metodologia</a><a href="#proximos">Próximos passos</a></nav></div></header>
 <main>
 <section class="sec hero-sec" id="abertura">
 <div class="hero-full">
@@ -427,7 +421,7 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .55s cubic-bezier
 <h3 class="block-h" style="margin-top:46px">Perfil do egresso</h3>
 <p>Profissional apto a assumir a <strong>direção de marketing de um negócio de saúde e beleza</strong> ou a <strong>gestão de produto e de marca própria</strong> no setor — no próprio consultório, clínica ou farmácia, ou como brand manager e gestor de portfólio em indústria cosmética, terceirista ou farmácia de manipulação.</p></div></div></div></section>
 <figure class="plate rise" hidden data-src="img/02-matriz.jpg"><img alt="Mesa de estudo clara com caderno, vidraria de laboratório e frascos de cosméticos"><figcaption>Imagem ilustrativa, sem vínculo com alunos ou docentes da instituição.</figcaption></figure>
-<section class="sec last" id="matriz"><div class="wrap"><div class="sec-grid wide">
+<section class="sec " id="matriz"><div class="wrap"><div class="sec-grid wide">
 <div class="sec-head rise">
 <span class="secno">08</span><h2 class="d2">Estrutura Acadêmica e Matriz Curricular</h2>
 <p class="lede">Os doze módulos do curso, com ementa, conteúdo programático e entregável.</p>
@@ -445,6 +439,78 @@ html.js .rise.in{opacity:1; transform:none; transition:opacity .55s cubic-bezier
 <div><dt>Carga total</dt><dd>400 h <small>soma dos componentes acima</small></dd></div>
 </div>
 <p class="src">A sequência, os nomes dos módulos, as cargas horárias e os conteúdos programáticos são os do projeto original e não foram alterados nesta apresentação.</p></div></div></div></section>
+<section class="sec " id="metodologia"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">09</span><h2 class="d2">Metodologia, modalidade e estrutura acadêmica</h2>
+<p class="lede">Como o curso funciona na prática: o encontro, o mês e o ano.</p>
+</div><div class="sec-body rise"><h3 class="block-h">Princípio metodológico</h3>
+<p>O conteúdo de cada módulo é ministrado em <strong>duas lentes — serviço e produto —</strong>, lado a lado, porque a lógica é a mesma e muda apenas o objeto de aplicação. A bifurcação ocorre somente na oficina prática, quando cada aluno aplica ao próprio negócio.</p>
+<p>Nenhum aluno perde conteúdo: o profissional de serviço que venha a lançar uma linha já viu o caminho, e o de produto compreende a clínica, que é o canal dele.</p>
+<h3 class="block-h" style="margin-top:46px">O encontro mensal</h3>
+<p>Cada módulo ocupa um fim de semana, com <strong>16 horas síncronas</strong> em blocos de no máximo três horas e meia: sexta das 19h30 às 22h30, sábado das 9h às 12h30 e das 14h às 17h30, e domingo das 9h às 12h30. A estrutura dos quatro blocos está desenhada na abertura da matriz curricular.</p>
+<h3 class="block-h" style="margin-top:46px">O mês completo</h3>
+<p>O encontro é o centro do módulo, não a sua totalidade. A preparação antecede e a aplicação sucede o fim de semana.</p><div class="tbl"><table><thead><tr><th>Quando</th><th>O que</th><th>Horas</th></tr></thead><tbody><tr><td>Duas semanas antes</td><td>Trilha de preparação: videoaula de base, leitura e diagnóstico do próprio negócio preenchido</td><td class="num">4</td></tr><tr><td>Fim de semana</td><td>Encontro ao vivo — sexta, sábado e domingo</td><td class="num">16</td></tr><tr><td>Quarta seguinte</td><td>Check-in de uma hora com o docente do módulo, sobre a implementação</td><td class="num">1</td></tr><tr><td>Três semanas seguintes</td><td>Tarefa aplicada ao próprio negócio e postagem do resultado na comunidade</td><td class="num">9</td></tr></tbody><tfoot><tr><td colspan="2">Por módulo</td><td>30 h</td></tr></tfoot></table></div>
+<p class="src">O check-in da quarta-feira seguinte é o mecanismo que sustenta a aplicação: sem ele, o aluno retoma a rotina e o módulo se encerra no domingo.</p>
+<h3 class="block-h" style="margin-top:46px">Matriz de carga horária</h3><div class="tbl"><table><thead><tr><th>Componente</th><th>Síncrono</th><th>Assíncrono</th><th>Total</th></tr></thead><tbody><tr><td>12 módulos × 30 h</td><td class="num">192 h</td><td class="num">168 h</td><td class="num">360 h</td></tr><tr><td>Projeto Aplicado — orientação e banca</td><td class="num">8 h</td><td class="num">32 h</td><td class="num">40 h</td></tr></tbody><tfoot><tr><td>Total do curso</td><td class="num">200 h</td><td class="num">200 h</td><td class="num">400 h</td></tr></tfoot></table></div>
+<p class="src">As 360 horas em módulos cumprem o mínimo de <em>lato sensu</em> sem depender do trabalho final — caminho mais seguro na análise de credenciamento, já que o trabalho de conclusão em geral não é computado nesse piso.</p>
+<h3 class="block-h" style="margin-top:46px">Calendário da turma</h3>
+<p>Turma de março a fevereiro, com encontros no terceiro fim de semana de cada mês. Três ajustes são necessários porque caem em períodos de pico de faturamento do público — se o encontro cair neles, a turma não comparece.</p><div class="tbl"><table><thead><tr><th>Mês</th><th>Ajuste</th><th>Motivo</th></tr></thead><tbody><tr><td><strong>Maio</strong> · M03</td><td>1º fim de semana</td><td>O 2º domingo é Dia das Mães — pico de faturamento de clínica e salão</td></tr><tr><td><strong>Dezembro</strong> · M10</td><td>1º fim de semana</td><td>De 15 a 31/12 o setor está em pico absoluto</td></tr><tr><td><strong>Janeiro</strong> · M11</td><td>Último fim de semana</td><td>Depois das férias escolares e do recesso</td></tr><tr><td><strong>Novembro</strong> · M09</td><td>Antecipar se possível</td><td>Black Friday e pré-verão</td></tr><tr><td><strong>Fevereiro</strong> · M12</td><td>Ajustar ao Carnaval</td><td>Data móvel; conferir ano a ano</td></tr></tbody></table></div>
+<h3 class="block-h" style="margin-top:46px">Acompanhamento e retenção</h3>
+<p style="margin-bottom:28px">A modalidade online ao vivo exige mecanismos explícitos de permanência. Quatro deles estão previstos no desenho.</p>
+<div class="pillars"><div class="pillar"><h4>Grupos fixos de cinco</h4><p>Do módulo 1 ao 12, mistos — dois de produto, três de serviço. Fazem a oficina juntos, cobram entrega um do outro e apresentam juntos. É o fator que mais pesa em conclusão de curso online, mais do que qualquer plataforma.</p></div><div class="pillar"><h4>Gravação liberada por sete dias</h4><p>Contraintuitivo, mas acesso permanente produz o "vejo depois" que nunca chega. O prazo curto mantém a aula ao vivo como o evento.</p></div><div class="pillar"><h4>Câmera aberta nas oficinas</h4><p>Pactuada no primeiro dia, com presença pesando na avaliação. Sem isso, o domingo vira uma sala de avatares.</p></div><div class="pillar"><h4>Monitor ou tutor por turma</h4><p>A pessoa que puxa quem sumiu na terceira semana. Em curso online isso não é luxo administrativo — é o que segura a taxa de conclusão.</p></div></div></div></div></div></section>
+<section class="sec " id="aplicacao"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">10</span><h2 class="d2">Aplicação prática e resultados de aprendizagem</h2>
+<p class="lede">O que o aluno constrói, módulo a módulo, e como é avaliado.</p>
+</div><div class="sec-body rise"><p class="lede" style="margin-bottom:34px">Cada módulo produz uma peça do plano de marketing do próprio aluno. Ao fim do curso, o Projeto Aplicado já está construído — não é trabalho adicional, é a consolidação do que foi feito.</p>
+<h3 class="block-h">Resultados de aprendizagem por módulo</h3>
+<div class="tbl"><table><thead><tr><th>Mód.</th><th>Módulo</th><th>Entregável</th></tr></thead><tbody><tr><td class="num">01</td><td><strong>Mercado, Cadeia de Valor e Consumidor de Saúde e Beleza</strong></td><td>Diagnóstico de negócio e mapa da jornada do cliente</td></tr><tr><td class="num">02</td><td><strong>Marketing Ético e Regulatório em Saúde e Beleza</strong></td><td>Auditoria de conformidade e plano de correção</td></tr><tr><td class="num">03</td><td><strong>Marca: Posicionamento, Arquitetura e Marca Pessoal</strong></td><td>Plataforma de marca e definição de arquitetura</td></tr><tr><td class="num">04</td><td><strong>Custos, Preço, Margem e Indicadores do Negócio</strong></td><td>Nova tabela de preços e painel de oito indicadores</td></tr><tr><td class="num">05</td><td><strong>Conteúdo, Storytelling e Produção para Redes Sociais</strong></td><td>Calendário de 90 dias e seis peças gravadas</td></tr><tr><td class="num">06</td><td><strong>Planejamento de Mídia e Custos de Mídia — online e offline</strong></td><td>Plano de mídia com orçamento e plano de mensuração</td></tr><tr><td class="num">07</td><td><strong>Mídia Paga, Tráfego Local e Performance</strong></td><td>Campanha no ar com verba de teste</td></tr><tr><td class="num">08</td><td><strong>Funil, CRM, Atendimento e Retenção</strong></td><td>Fluxo de atendimento e oito scripts</td></tr><tr><td class="num">09</td><td><strong>Canais, Distribuição, Política Comercial e Trade</strong></td><td>Mapa de canais e política comercial escrita</td></tr><tr><td class="num">10</td><td><strong>Desenvolvimento de Produto e Marca Própria</strong></td><td>Briefing técnico de produto e cronograma de lançamento</td></tr><tr><td class="num">11</td><td><strong>Campanhas, Lançamento e Crescimento</strong></td><td>Plano de campanha ou de lançamento</td></tr><tr><td class="num">12</td><td><strong>Summit Saúde &amp; Beleza — Laboratório, Pitch e Banca</strong></td><td>Projeto Aplicado defendido em banca</td></tr></tbody></table></div>
+<h3 class="block-h" style="margin-top:46px">Projeto Aplicado</h3>
+<p>Plano de marketing de um negócio, serviço ou produto real, consolidando as doze entregas mensais. A orientação começa a partir do sexto módulo e a defesa ocorre em banca, no módulo de encerramento.</p>
+<p>O aluno da Família A entrega um plano de captação e crescimento; o da Família B, um plano de lançamento de marca.</p>
+<h3 class="block-h" style="margin-top:46px">Sistema de avaliação</h3>
+<div class="pillars">
+<div class="pillar"><h4>Por módulo</h4><p>Entregável prático aplicado ao próprio negócio, apresentado na oficina de domingo. A presença nos encontros síncronos compõe a avaliação, com peso a definir em regulamento.</p></div>
+<div class="pillar"><h4>Projeto Aplicado</h4><p>Plano de marketing completo, avaliado quanto à consistência regulatória, à viabilidade financeira, à coerência entre oferta e canal e à qualidade de execução.</p></div>
+<div class="pillar"><h4>Banca</h4><p>Composição proposta: dois docentes do curso e um convidado do mercado, de modo a atender ao requisito de titulação sem perder a avaliação externa.</p></div>
+</div>
+<h3 class="block-h" style="margin-top:46px">Material e instrumentos do aluno</h3>
+<p style="margin-bottom:30px">Além do material didático de cada módulo — videoaulas, apostila, slides e estudo de caso —, o curso entrega instrumentos de trabalho preenchidos em oficina, com o docente presente. Vinte e seis instrumentos estão previstos.</p>
+<div class="kit"><div><h4>Conformidade — material âncora</h4><ul><li>Semáforo de publicidade em saúde: checklist verde, amarelo e vermelho por conselho profissional</li><li>Termo de autorização de uso de imagem para antes-e-depois</li><li>Política de privacidade e termo de consentimento LGPD para clínica</li><li>Template de dossiê de claims cosméticos</li></ul></div><div><h4>Financeiro e gestão</h4><ul><li>Planilha de precificação de procedimento: custo direto, hora-sala, margem</li><li>Planilha de custo industrial e cascata de preço no canal</li><li>Calculadora de CAC, LTV e ROAS</li><li>DRE simplificado e painel de indicadores</li><li>Planilha de ocupação de agenda e de giro de estoque</li></ul></div><div><h4>Conteúdo e mídia</h4><ul><li>Calendário editorial sazonal de 12 meses do setor</li><li>Banco de ganchos e roteiros de vídeo curto para saúde e estética</li><li>Swipe file de anúncios aprovados no setor</li><li>Guia de estúdio de bolso: luz, áudio e enquadramento no consultório</li><li>Templates editáveis de post, carrossel e manual de marca</li><li>Plano de mídia e brief de campanha</li></ul></div><div><h4>Vendas e relacionamento</h4><ul><li>Oito scripts de WhatsApp: primeiro contato, orçamento, objeção de preço, falta, pós-procedimento, reativação, indicação, retorno</li><li>Roteiro de consulta de avaliação que converte</li><li>Matriz de pacotes e combos</li><li>Política comercial e tabela por canal</li></ul></div><div><h4>Produto e canal</h4><ul><li>Template de briefing técnico para o laboratório</li><li>Checklist de seleção e negociação com terceirista</li><li>Plano de lançamento de linha</li><li>Argumentário e material de treinamento de canal</li></ul></div><div><h4>Estratégia</h4><ul><li>Modelo de plano de marketing — a estrutura do Projeto Aplicado</li><li>Prompt pack de IA para saúde e beleza</li><li>Diagnóstico inicial do negócio, revisitado a cada módulo</li></ul></div></div></div></div></div></section>
+<figure class="plate rise" hidden data-src="img/04-implantacao.jpg"><img alt="Prateleira clara com potes e frascos de cosméticos sem marca, em luz natural"><figcaption>Imagem ilustrativa, sem vínculo com alunos ou docentes da instituição.</figcaption></figure>
+<section class="sec " id="implantacao"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">11</span><h2 class="d2">Potencial de implantação e expansão institucional</h2>
+<p class="lede">O que a proposta exige da instituição e o que devolve a ela.</p>
+</div><div class="sec-body rise"><h3 class="block-h">O Summit de encerramento como ativo institucional</h3>
+<p>O décimo segundo módulo é um evento online que acumula três funções: encerra a turma, abriga a banca do Projeto Aplicado e abre a captação da turma seguinte.</p>
+<div class="we" style="margin-top:28px"><div class="we-row"><div class="we-when"><b>Sexta</b>19h30 — 22h30</div><div class="we-what">
+            <p>Convidados do mercado, vitrine institucional da IEPG e abertura das inscrições da próxima turma.</p>
+            <span class="lens l-prod" style="display:inline-block;margin-top:8px">Aberta ao público, gratuita</span>
+          </div></div><div class="we-row"><div class="we-when"><b>Sábado</b>9h — 19h</div><div class="we-what"><p>Só alunos. Duas bancadas — campanha de captação e plano de lançamento. Finalização do Projeto Aplicado com consultoria dos avaliadores.</p></div></div><div class="we-row"><div class="we-when"><b>Domingo</b>9h — 13h</div><div class="we-what"><p>Pitch e banca. Cada aluno defende seu projeto diante de avaliadores do setor. Premiação e encerramento de turma.</p></div></div></div>
+<p class="src">Começando a turma em março, o curso encerra em fevereiro — e a sexta-feira aberta cai na janela de matrícula da turma que inicia em março seguinte. O encerramento de uma turma passa a ser o lançamento da próxima.</p>
+<div class="note" style="margin-top:34px"><h4>Possibilidades adicionais</h4><p>O evento comporta patrocínio de marcas de cosmético, terceiristas e fornecedores de equipamento, que teriam acesso a uma plateia de clínicas e farmácias. E os módulos podem ser ofertados avulsos como extensão a quem já concluiu o curso.</p><p>Ambas são possibilidades a avaliar, não receitas projetadas.</p></div>
+<h3 class="block-h" style="margin-top:46px">Corpo docente necessário</h3>
+<p style="margin-bottom:26px">A grade requer dois perfis que raramente coincidem na mesma pessoa, razão pela qual a maior parte dos módulos prevê dois docentes dividindo o encontro.</p><div class="tbl"><table><thead><tr><th>Perfil</th><th>Módulos</th><th>Observação</th></tr></thead><tbody><tr><td><strong>Advogado de direito médico e sanitário</strong></td><td class="num">02</td><td>Contratação prioritária — é o diferencial do curso</td></tr><tr><td><strong>Responsável técnico com vivência de registro</strong></td><td class="num">02, 10</td><td>Rotulagem, claims, caminho regulatório do produto</td></tr><tr><td><strong>Marketing com cases no setor</strong></td><td class="num">05, 07, 08</td><td>Conteúdo, mídia paga, funil</td></tr><tr><td><strong>Planejamento de mídia</strong></td><td class="num">06</td><td>Perfil de agência ou veículo; raro na academia</td></tr><tr><td><strong>Dono de clínica que escalou</strong></td><td class="num">04, 11 (lente serviço)</td><td>Custo de procedimento, agenda, expansão</td></tr><tr><td><strong>Indústria cosmética e distribuição</strong></td><td class="num">04, 09, 10, 11 (lente produto)</td><td>A contratação mais difícil da grade</td></tr><tr><td><strong>Farmacêutico e desenvolvedor de cosméticos</strong></td><td class="num">10</td><td>Já na casa — docentes das pós existentes</td></tr><tr><td><strong>Mestres e doutores da IEPG</strong></td><td class="num">Metodologia e banca</td><td>Cumprimento do requisito de titulação</td></tr></tbody></table></div>
+<div class="note"><h4>A modalidade online resolve o principal gargalo</h4><p>Os módulos de mídia, canais e desenvolvimento de produto exigem profissionais de indústria cosmética, distribuição e planejamento de mídia — perfil que dificilmente se desloca para ministrar meio dia de aula presencial. Na modalidade online, a contratação não tem restrição geográfica e pode ser feita por meio turno.</p></div>
+<h3 class="block-h" style="margin-top:46px">Potencial de expansão do portfólio</h3>
+<div class="pillars">
+<div class="pillar"><h4>Diferenciação</h4><p>Ocupa um espaço hoje vazio no portfólio, sem competir com os cursos existentes e sem canibalizar matrículas.</p></div>
+<div class="pillar"><h4>Base de captação própria</h4><p>O primeiro público são os egressos dos cursos atuais, alcançáveis pelos canais que a instituição já mantém.</p></div>
+<div class="pillar"><h4>Reaproveitamento docente</h4><p>Dois módulos podem ser construídos com docentes já vinculados às pós de Assuntos Regulatórios e de Desenvolvimento de Produtos Cosméticos.</p></div>
+<div class="pillar"><h4>Recorrência</h4><p>O Summit anual e a oferta de módulos avulsos criam pontos de contato com o egresso depois da conclusão.</p></div>
+</div></div></div></div></section>
+<section class="sec final" id="proximos"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">12</span><h2 class="d2">Considerações finais e próximos passos</h2>
+<p class="lede">O que se pede à direção da Faculdade IEPG.</p>
+</div><div class="sec-body rise"><p class="lede" style="margin-bottom:34px">A proposta está completa como projeto acadêmico. O que se pede à direção é a avaliação sobre avançar para a fase de implantação — e há quatro pontos que precisam de decisão institucional antes de qualquer divulgação.</p>
+<ol class="steps"><li><h4>Credenciamento EAD — verificação obrigatória</h4><p>Pós-graduação lato sensu a distância exige que a instituição esteja credenciada para essa modalidade, em trâmite distinto do credenciamento presencial. É preciso confirmar a situação atual da IEPG <strong>antes</strong> de divulgar o curso como online.</p>
+        <p>Se o credenciamento EAD não estiver em vigor, o caminho usual é ofertar com encontros síncronos sob o credenciamento existente — mas isso depende de análise jurídica da própria instituição, não de uma suposição deste documento.</p></li><li><h4>Composição da banca</h4><p>Confirmar se uma banca com avaliador externo de mercado atende ao requisito de titulação. A composição proposta — dois docentes do curso mais um convidado — foi desenhada para atender aos dois lados, mas precisa de validação antes de entrar no regulamento.</p></li><li><h4>Posicionamento de preço contra o EAD barato</h4><p>Online nacional coloca o curso na mesma prateleira dos grandes players de pós a preço baixo. O que separa não é conteúdo, é formato: <strong>ao vivo, com turma, oficina e banca</strong> — não videoaula gravada com prova de múltipla escolha. Isso precisa estar na primeira linha da comunicação, e é o que sustenta um ticket várias vezes maior.</p></li><li><h4>Nome do curso e Summit presencial</h4><p>Definir o nome entre as três opções da seção 01. E avaliar manter o Summit como o único encontro presencial, em formato de formatura facultativa — curso 100% online com um encontro final presencial opcional aumenta matrícula e fecha o vínculo da turma, sem alterar grade nem carga horária.</p></li></ol>
+<div class="goldrule" style="margin:46px 0 30px"></div>
+<h3 class="d3" style="margin-bottom:18px">Convite</h3>
+<p>Este documento reúne o desenho acadêmico completo: objetivos, perfil do egresso, público, matriz curricular com os doze módulos e seus conteúdos programáticos, metodologia, carga horária, sistema de avaliação, corpo docente necessário e calendário.</p>
+<p>O passo seguinte é a leitura crítica pela coordenação acadêmica e pela direção, com os ajustes que a instituição julgar necessários. <strong>A proposta foi construída para ser discutida e corrigida, não para ser aprovada como está.</strong></p></div></div></div></section>
 
 
 
