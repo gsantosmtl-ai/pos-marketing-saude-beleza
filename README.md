@@ -1,7 +1,25 @@
-# Pos-graduacao em Marketing Saude e Beleza - IEPG
+# Pos-graduacao em Marketing em Saude e Beleza — Faculdade IEPG
 
-Documento de trabalho da coordenacao: proposta de curso (12 modulos, 12 meses, 100% online ao vivo).
+Proposta academica apresentada a direcao da Faculdade IEPG.
 
-Pagina: https://gsantosmtl-ai.github.io/pos-marketing-saude-beleza/
+**Pagina:** https://gsantosmtl-ai.github.io/pos-marketing-saude-beleza/
 
-Conteudo interno, nao indexado em buscadores. Grade sujeita a validacao de credenciamento e de corpo docente.
+## Imagens
+
+A pagina funciona completa sem fotografias. Cada "plate" so aparece se o arquivo existir;
+se o arquivo nao estiver na pasta, o bloco e removido automaticamente e o layout se fecha.
+
+Para adicionar, basta colocar o arquivo em `img/` com o nome exato:
+
+| Arquivo | Onde aparece | Proporcao sugerida |
+|---|---|---|
+| `img/01-abertura.jpg` | Logo abaixo da abertura, em faixa larga | 16:6, minimo 2000 px de largura |
+
+## Estrutura
+
+- `index.html` — pagina unica, CSS e JS embutidos, sem dependencia externa alem das fontes
+- `robots.txt` — bloqueia indexacao em buscadores
+- `img/` — fotografias opcionais
+
+Conteudo interno. A proposta nao possui aprovacao institucional, credenciamento especifico
+ou corpo docente contratado nesta data.

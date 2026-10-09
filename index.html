@@ -5,1015 +5,549 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="googlebot" content="noindex, nofollow">
-<meta name="description" content="Proposta de pos-graduacao em Marketing Saude e Beleza - IEPG. Documento interno de trabalho.">
-<style>
-:root{color-scheme:light dark}
-img{max-width:100%}
-[hidden]{display:none!important}
-</style>
-<title>Marketing Saúde e Beleza</title>
+<meta name="description" content="Proposta academica de pos-graduacao em Marketing em Saude e Beleza, apresentada a direcao da Faculdade IEPG.">
+<title>Marketing em Saúde e Beleza</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Archivo:wght@400;500;600&display=swap">
 <style>
 :root{
-  --ground:#F6F8F7; --surface:#FFFFFF; --surface-2:#EDF2F0; --sunken:#E6ECE9;
-  --ink:#13201C; --ink-2:#3B4A45; --muted:#6B7A74; --rule:#D6DFDB; --rule-soft:#E6EDEA;
-  --serv:#0E6E62; --serv-tint:#E1EFEC; --prod:#8C3D6B; --prod-tint:#F4E5EE;
-  --flag:#8A6318; --flag-tint:#F6EEDC;
+  color-scheme:light;
+  --paper:#FCFBF7; --white:#FFFFFF; --wash:#F5F2EA; --greenwash:#EFF3F1;
+  --green:#15332A; --green2:#2E5447; --gold:#A8854C; --gold2:#C9B183; --goldwash:#F7F2E7;
+  --ink:#2A302D; --body:#4A524E; --muted:#7A837E; --rule:#E5E1D6; --hair:#EFEBE1;
+  --disp:"Bodoni Moda",Georgia,"Times New Roman",serif;
   --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --ground:#0E1412; --surface:#151D1A; --surface-2:#1B2521; --sunken:#111917;
-    --ink:#E9F0ED; --ink-2:#C2CEC9; --muted:#8B9B95; --rule:#2A3632; --rule-soft:#212C28;
-    --serv:#52BCAC; --serv-tint:#13302B; --prod:#DB8FB9; --prod-tint:#331D29;
-    --flag:#D5A95C; --flag-tint:#2B2415;
-  }
-}
-:root[data-theme="dark"]{
-  --ground:#0E1412; --surface:#151D1A; --surface-2:#1B2521; --sunken:#111917;
-  --ink:#E9F0ED; --ink-2:#C2CEC9; --muted:#8B9B95; --rule:#2A3632; --rule-soft:#212C28;
-  --serv:#52BCAC; --serv-tint:#13302B; --prod:#DB8FB9; --prod-tint:#331D29;
-  --flag:#D5A95C; --flag-tint:#2B2415;
+  --pad:clamp(20px,5vw,80px);
+  --maxw:1240px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0; background:var(--ground); color:var(--ink);
-  font-family:var(--serif); font-size:17px; line-height:1.62;
-  -webkit-font-smoothing:antialiased;
-}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--paper); color:var(--body);
+  font-family:var(--sans); font-size:16px; line-height:1.68;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+img{max-width:100%; display:block}
+[hidden]{display:none!important}
 
-/* ---------- shell ---------- */
-.bar{
-  position:sticky; top:env(safe-area-inset-top,0px); z-index:20;
-  background:color-mix(in srgb,var(--ground) 92%,transparent);
-  backdrop-filter:blur(8px); border-bottom:1px solid var(--rule);
-}
-.bar-in{
-  max-width:1120px; margin:0 auto; padding:10px 20px;
-  display:flex; align-items:center; gap:18px; flex-wrap:wrap;
-}
-.wordmark{
-  font-family:var(--sans); font-weight:700; font-size:13px; letter-spacing:.06em;
-  text-transform:uppercase; color:var(--ink); white-space:nowrap;
-}
-.wordmark em{font-style:normal; color:var(--serv)}
-.bar nav{display:flex; gap:14px; flex-wrap:wrap; margin-left:auto}
-.bar nav a{
-  font-family:var(--mono); font-size:11.5px; letter-spacing:.02em;
-  color:var(--muted); text-decoration:none; padding:3px 0; border-bottom:1px solid transparent;
-}
-.bar nav a:hover,.bar nav a:focus-visible{color:var(--ink); border-bottom-color:var(--serv)}
-
-main{max-width:1120px; margin:0 auto; padding-block:0 72px; padding-left:20px; padding-right:20px}
-.prose{max-width:66ch}
-section{padding-block:56px; border-top:1px solid var(--rule-soft)}
-section:first-of-type{border-top:0}
-
-/* ---------- type ---------- */
-h1,h2,h3,h4{font-family:var(--sans); text-wrap:balance; margin:0}
-h1{font-size:clamp(2.1rem,5.2vw,3.3rem); font-weight:700; line-height:1.08; letter-spacing:-.02em}
-h2{font-size:clamp(1.45rem,3vw,1.9rem); font-weight:600; line-height:1.18; letter-spacing:-.01em}
-h3{font-size:1.1rem; font-weight:600; line-height:1.3; margin-top:0}
-h4{font-size:.95rem; font-weight:600}
-p{margin:0 0 1.05em}
+/* ---------------- typography ---------------- */
+h1,h2,h3,h4{margin:0; color:var(--green); text-wrap:balance}
+.d1,.d2,.d3{font-family:var(--disp); font-weight:400; letter-spacing:-.012em; line-height:1.06}
+.d1{font-size:clamp(2.7rem,7vw,5.1rem)}
+.d2{font-size:clamp(1.9rem,4.2vw,3.1rem); line-height:1.1}
+.d3{font-size:clamp(1.35rem,2.4vw,1.85rem); line-height:1.2}
+p{margin:0 0 1.1em}
 p:last-child{margin-bottom:0}
-strong{font-weight:600}
-a{color:var(--serv)}
+strong{font-weight:600; color:var(--ink)}
+em{font-style:italic}
+a{color:var(--green2)}
 .eyebrow{
-  font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--muted); margin:0 0 14px;
+  font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--gold); margin:0 0 20px; display:block;
 }
-.sec-no{
-  font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; color:var(--muted);
-  display:block; margin-bottom:10px;
-}
-.lead{font-size:1.2rem; line-height:1.55; color:var(--ink-2)}
-.note{font-size:.92rem; color:var(--muted)}
-ul,ol{margin:0 0 1.05em; padding-left:1.25em}
-li{margin-bottom:.4em}
+.lede{font-size:clamp(1.05rem,1.6vw,1.26rem); line-height:1.6; color:var(--body)}
+.small{font-size:.9rem}
+.muted{color:var(--muted)}
+.src{font-size:.82rem; color:var(--muted); letter-spacing:.01em; margin-top:22px}
+ul,ol{margin:0 0 1.1em; padding-left:1.1em}
+li{margin-bottom:.5em}
 li:last-child{margin-bottom:0}
-.tight li{margin-bottom:.25em}
+.plain{list-style:none; padding:0}
+.plain li{padding-left:20px; position:relative}
+.plain li::before{content:""; position:absolute; left:0; top:.72em; width:9px; height:1px; background:var(--gold2)}
+.num{font-variant-numeric:tabular-nums}
 
-/* ---------- hero ---------- */
-.hero{padding-block:64px 48px}
-.hero h1{margin-bottom:22px}
-.hero .lead{max-width:60ch}
-.thesis{
-  margin:30px 0 0; padding:20px 22px; background:var(--serv-tint);
-  border-left:3px solid var(--serv); border-radius:0 8px 8px 0; max-width:62ch;
+/* ---------------- shell ---------------- */
+.wrap{max-width:var(--maxw); margin:0 auto; padding-left:var(--pad); padding-right:var(--pad)}
+.topbar{
+  position:sticky; top:env(safe-area-inset-top,0px); z-index:50;
+  background:rgba(252,251,247,.93); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--hair);
 }
-.thesis p{font-size:1.1rem; line-height:1.5; margin:0}
+.topbar-in{
+  max-width:var(--maxw); margin:0 auto; padding:14px var(--pad);
+  display:flex; align-items:center; gap:24px;
+}
+.brandline{
+  font-size:10.5px; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--green); white-space:nowrap;
+}
+.brandline span{color:var(--gold)}
+.topnav{display:flex; gap:26px; margin-left:auto}
+.topnav a{
+  font-size:11.5px; font-weight:500; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--muted); text-decoration:none; padding:4px 0;
+  border-bottom:1px solid transparent; transition:color .2s, border-color .2s;
+}
+.topnav a:hover,.topnav a:focus-visible{color:var(--green); border-bottom-color:var(--gold2)}
+@media (max-width:900px){.topnav{display:none}}
 
-/* ---------- spec sheet ---------- */
-.ficha{
-  margin-top:40px; border:1px solid var(--rule); border-radius:10px;
-  background:var(--surface); overflow:hidden;
+/* ---------------- hero ---------------- */
+.hero{padding:clamp(56px,10vw,120px) 0 clamp(40px,6vw,72px)}
+.hero .d1{margin:0 0 26px}
+.hero .lede{max-width:34ch}
+.hero-grid{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:48px; align-items:start}
+.hero-side{
+  text-align:right; font-size:10.5px; font-weight:600; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--muted); line-height:2.5; padding-top:8px;
 }
-.ficha-h{
-  padding:11px 18px; border-bottom:1px solid var(--rule); background:var(--surface-2);
-  font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr} .hero-side{display:none}}
+.goldrule{width:68px; height:1px; background:var(--gold); margin:34px 0}
+.recipient{
+  font-size:.92rem; color:var(--muted); max-width:46ch;
 }
-.ficha dl{
-  margin:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr));
-}
-.ficha div{padding:16px 18px; border-right:1px solid var(--rule-soft); border-bottom:1px solid var(--rule-soft)}
-.ficha dt{
-  font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
-  color:var(--muted); margin-bottom:6px;
-}
-.ficha dd{margin:0; font-family:var(--sans); font-size:.98rem; font-weight:500; line-height:1.35}
-.ficha dd b{font-family:var(--mono); font-weight:500; font-size:1.3rem; display:block; letter-spacing:-.01em}
+.recipient b{color:var(--green); font-weight:600}
 
-/* ---------- lens key ---------- */
-.key{display:flex; gap:20px; flex-wrap:wrap; margin:0 0 26px}
-.key span{
-  font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; color:var(--ink-2);
-  display:flex; align-items:center; gap:7px;
+/* ---------------- spec strip ---------------- */
+.spec{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  border-top:1px solid var(--rule); margin-top:clamp(40px,6vw,70px);
 }
-.dot{width:10px; height:10px; border-radius:2px; flex:none}
-.dot.s{background:var(--serv)} .dot.p{background:var(--prod)} .dot.n{background:var(--muted)}
+.spec div{padding:24px 26px 24px 0; border-right:1px solid var(--hair)}
+.spec div:last-child{border-right:0}
+.spec dt{font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:10px}
+.spec dd{margin:0; font-family:var(--disp); font-size:1.72rem; color:var(--green); line-height:1.1; font-variant-numeric:tabular-nums}
+.spec dd small{display:block; font-family:var(--sans); font-size:.82rem; color:var(--muted); margin-top:7px; line-height:1.5; letter-spacing:0}
+@media (max-width:620px){.spec div{padding-right:16px}}
 
-/* ---------- weekend schedule ---------- */
-.we{display:grid; gap:10px; margin:28px 0 0}
-.we-row{
-  display:grid; grid-template-columns:132px 1fr; gap:16px; align-items:stretch;
+/* ---------------- sections ---------------- */
+.sec{padding:clamp(56px,8vw,104px) 0; border-top:1px solid var(--hair)}
+.sec-grid{display:grid; grid-template-columns:minmax(0,4fr) minmax(0,7fr); gap:clamp(28px,5vw,80px); align-items:start}
+.sec-grid.wide{grid-template-columns:1fr}
+@media (max-width:860px){.sec-grid{grid-template-columns:1fr; gap:26px}}
+.sec-head .d2{margin-bottom:20px}
+.sec-head .lede{max-width:38ch}
+.secno{
+  font-family:var(--disp); font-size:.95rem; color:var(--gold); letter-spacing:.08em;
+  display:block; margin-bottom:14px; font-variant-numeric:tabular-nums;
 }
-.we-when{
-  font-family:var(--mono); font-size:12px; line-height:1.45; color:var(--muted);
-  padding-top:14px; border-top:1px solid var(--rule);
-}
-.we-when b{display:block; font-family:var(--sans); font-weight:600; font-size:.92rem; color:var(--ink); letter-spacing:.01em}
-.we-block{
-  padding:14px 18px; border:1px solid var(--rule); border-radius:8px; background:var(--surface);
-  border-left-width:3px;
-}
-.we-block h4{margin:0 0 4px}
-.we-block p{margin:0; font-size:.92rem; color:var(--muted)}
-.we-block.comum{border-left-color:var(--muted)}
-.we-block.serv{border-left-color:var(--serv)} .we-block.serv h4{color:var(--serv)}
-.we-block.prod{border-left-color:var(--prod)} .we-block.prod h4{color:var(--prod)}
-.we-block.split{border-left-color:var(--ink); background:var(--surface-2)}
-.salas{display:flex; gap:10px; margin-top:12px; flex-wrap:wrap}
-.sala{
-  flex:1 1 150px; padding:9px 13px; border-radius:6px; font-family:var(--mono); font-size:11.5px;
-}
-.sala.s{background:var(--serv-tint); color:var(--serv); border:1px solid var(--serv)}
-.sala.p{background:var(--prod-tint); color:var(--prod); border:1px solid var(--prod)}
+.sec-body > *:first-child{margin-top:0}
+.sticky-head{position:sticky; top:84px}
+@media (max-width:860px){.sticky-head{position:static}}
 
-/* ---------- modules ---------- */
-.mods{display:grid; gap:14px; margin-top:30px}
-.mod{
-  border:1px solid var(--rule); border-radius:10px; background:var(--surface);
-  padding:20px 22px; display:grid; grid-template-columns:54px 1fr; gap:4px 18px;
+/* ---------------- editorial pieces ---------------- */
+.pillars{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:34px; margin-top:8px}
+.pillar h4{font-size:11px; font-weight:600; letter-spacing:.17em; text-transform:uppercase; color:var(--green); margin-bottom:14px; padding-bottom:13px; border-bottom:1px solid var(--rule)}
+.pillar p{font-size:.94rem; margin:0}
+.quote{
+  border-left:2px solid var(--gold); padding:4px 0 4px 26px; margin:34px 0;
+  font-family:var(--disp); font-size:clamp(1.15rem,2vw,1.45rem); line-height:1.4; color:var(--green);
 }
-.mod.flagged{border-color:var(--serv)}
-.mod-no{
-  font-family:var(--mono); font-size:12px; color:var(--muted); letter-spacing:.04em;
-  padding-top:4px; grid-row:span 3;
+.note{
+  background:var(--goldwash); border:1px solid #EDE2CC; padding:22px 26px; margin-top:32px;
 }
-.mod-no b{display:block; font-size:1.35rem; color:var(--ink); font-weight:500; letter-spacing:-.02em}
-.mod h3{margin:0}
-.mod-mes{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:3px}
-.mod-body{margin-top:12px}
-.mod-body p{font-size:.95rem; margin:0 0 .6em}
-.lenses{display:grid; gap:1px; margin-top:12px; border-radius:6px; overflow:hidden; background:var(--rule)}
-.lens-row{display:flex; gap:1px}
-.seg{padding:9px 12px; font-family:var(--mono); font-size:11px; line-height:1.4; letter-spacing:.02em}
-.seg.s{background:var(--serv-tint); color:var(--serv)}
-.seg.p{background:var(--prod-tint); color:var(--prod)}
-.seg.n{background:var(--surface-2); color:var(--ink-2)}
-.seg b{font-weight:500; letter-spacing:.08em; text-transform:uppercase; font-size:10px; display:block; opacity:.85}
-
-/* ---------- summit ---------- */
-.summit{
-  border:1px solid var(--serv); border-radius:12px; background:var(--serv-tint);
-  padding:28px 26px; margin-top:26px;
+.note h4{font-size:11px; font-weight:600; letter-spacing:.17em; text-transform:uppercase; color:var(--gold); margin-bottom:11px}
+.note p{font-size:.93rem; margin:0}
+.note p + p{margin-top:.8em}
+.split{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:clamp(28px,4vw,56px)}
+.block-h{
+  font-size:11px; font-weight:600; letter-spacing:.17em; text-transform:uppercase;
+  color:var(--green); margin:0 0 16px; padding-bottom:13px; border-bottom:1px solid var(--rule);
 }
-.summit h3{margin-bottom:10px}
-.summit .days{display:grid; gap:12px; margin-top:22px}
-.day{
-  background:var(--surface); border:1px solid var(--rule); border-radius:8px; padding:15px 18px;
-  display:grid; grid-template-columns:150px 1fr; gap:14px;
-}
-.day > div:first-child{font-family:var(--mono); font-size:12px; color:var(--muted)}
-.day > div:first-child b{display:block; font-family:var(--sans); font-size:.95rem; color:var(--ink); font-weight:600}
-.day p{margin:0; font-size:.93rem}
-.open-tag{
-  display:inline-block; font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
-  background:var(--flag-tint); color:var(--flag); border:1px solid var(--flag); border-radius:4px;
-  padding:2px 7px; margin-top:6px;
+.block-h .tag{float:right; color:var(--gold); letter-spacing:.1em; font-weight:500}
+.persona{margin-bottom:26px}
+.persona:last-child{margin-bottom:0}
+.persona b{display:block; color:var(--ink); font-weight:600; font-size:.96rem; margin-bottom:4px}
+.persona span{font-size:.92rem; color:var(--muted)}
+.chips{display:flex; flex-wrap:wrap; gap:9px; margin-top:4px}
+.chip{
+  font-size:.85rem; color:var(--green2); border:1px solid var(--rule);
+  padding:7px 15px; background:var(--white);
 }
 
-/* ---------- tables ---------- */
-.tw{overflow-x:auto; margin:24px 0; border:1px solid var(--rule); border-radius:10px; background:var(--surface)}
-table{border-collapse:collapse; width:100%; min-width:520px; font-size:.93rem}
-th,td{text-align:left; padding:12px 16px; border-bottom:1px solid var(--rule-soft); vertical-align:top}
-tr:last-child td{border-bottom:0}
+/* ---------------- tables ---------------- */
+.tbl{overflow-x:auto; margin:0 0 4px}
+table{border-collapse:collapse; width:100%; min-width:500px; font-size:.92rem}
+th,td{text-align:left; padding:15px 20px 15px 0; border-bottom:1px solid var(--hair); vertical-align:top}
 th{
-  font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
-  color:var(--muted); font-weight:400; background:var(--surface-2); white-space:nowrap;
+  font-size:10px; font-weight:600; letter-spacing:.17em; text-transform:uppercase;
+  color:var(--gold); border-bottom:1px solid var(--rule); white-space:nowrap; padding-top:0;
 }
-td.num{font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap}
-tfoot td{font-family:var(--sans); font-weight:600; background:var(--surface-2); border-top:1px solid var(--rule)}
+td.num{font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--green); font-weight:500}
+tfoot td{font-weight:600; color:var(--green); border-top:1px solid var(--rule); border-bottom:0}
 
-/* ---------- misc blocks ---------- */
-.cols{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(272px,1fr)); margin-top:26px}
-.card{border:1px solid var(--rule); border-radius:10px; background:var(--surface); padding:19px 21px}
-.card h3{margin-bottom:8px; font-size:1rem}
-.card h3 .dot{display:inline-block; vertical-align:middle; margin-right:7px}
-.card p,.card ul{font-size:.93rem}
-.card ul{padding-left:1.1em; margin-bottom:0}
+/* ---------------- modules ---------------- */
+.matriz-top{
+  display:flex; justify-content:space-between; align-items:flex-end; gap:24px;
+  flex-wrap:wrap; margin-bottom:10px; padding-bottom:18px; border-bottom:1px solid var(--rule);
+}
+.matriz-top p{margin:0; font-size:.88rem; color:var(--muted)}
+.btn{
+  font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--green); background:transparent; border:1px solid var(--gold2);
+  padding:12px 22px; cursor:pointer; transition:background .2s,color .2s,border-color .2s;
+}
+.btn:hover,.btn:focus-visible{background:var(--green); color:var(--paper); border-color:var(--green)}
+details.mod{border-bottom:1px solid var(--hair)}
+details.mod > summary{
+  display:grid; grid-template-columns:62px minmax(0,1fr) auto 22px; gap:18px; align-items:baseline;
+  padding:26px 0; cursor:pointer; list-style:none; transition:background .2s;
+}
+details.mod > summary::-webkit-details-marker{display:none}
+details.mod > summary:hover .mod-ttl{color:var(--gold)}
+summary:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+.mod-num{font-family:var(--disp); font-size:1.5rem; color:var(--gold2); font-variant-numeric:tabular-nums; line-height:1}
+.mod-ttl{font-family:var(--disp); font-size:clamp(1.08rem,1.9vw,1.42rem); color:var(--green); line-height:1.25; transition:color .2s}
+.mod-meta{font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); white-space:nowrap; text-align:right}
+.mod-chev{position:relative; width:13px; height:13px; justify-self:end; align-self:center}
+.mod-chev::before,.mod-chev::after{content:""; position:absolute; background:var(--gold); transition:transform .25s, opacity .25s}
+.mod-chev::before{top:6px; left:0; width:13px; height:1px}
+.mod-chev::after{top:0; left:6px; width:1px; height:13px}
+details.mod[open] .mod-chev::after{transform:scaleY(0); opacity:0}
+details.mod[open] .mod-ttl{color:var(--gold)}
+.mod-in{padding:4px 0 42px; display:grid; grid-template-columns:62px minmax(0,1fr); gap:18px}
+.mod-in > *{grid-column:2}
+.mod-ementa{font-size:.95rem; color:var(--body); max-width:76ch}
+.mod-ementa b{
+  display:block; font-family:var(--sans); font-size:10px; font-weight:600; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--gold); margin-bottom:9px;
+}
+.prog{list-style:none; padding:0; margin:26px 0 0; border-top:1px solid var(--hair)}
+.prog li{
+  display:grid; grid-template-columns:158px minmax(0,1fr); gap:24px;
+  padding:19px 0; border-bottom:1px solid var(--hair); margin:0;
+}
+.prog-h{font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; line-height:1.7}
+.prog-h b{display:block; font-family:var(--disp); font-size:1.02rem; font-weight:400; letter-spacing:0; text-transform:none; margin-bottom:3px}
+.prog p{font-size:.93rem; margin:0; max-width:74ch}
+.k-comum .prog-h{color:var(--muted)} .k-comum .prog-h b{color:var(--green)}
+.k-serv .prog-h,.k-serv .prog-h b{color:var(--green2)}
+.k-prod .prog-h,.k-prod .prog-h b{color:var(--gold)}
+.k-dom .prog-h{color:var(--muted)} .k-dom .prog-h b{color:var(--green)}
+.mod-note{font-size:.9rem; color:var(--muted); font-style:italic; margin-top:22px; max-width:72ch}
+.mod-ent{
+  margin-top:22px; font-size:.93rem; color:var(--ink);
+  border-top:1px solid var(--rule); padding-top:16px; max-width:72ch;
+}
+.mod-ent b{
+  font-family:var(--sans); font-size:10px; font-weight:600; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--gold); margin-right:12px;
+}
+@media (max-width:720px){
+  details.mod > summary{grid-template-columns:40px minmax(0,1fr) 20px; gap:14px; padding:22px 0}
+  .mod-meta{grid-column:2; text-align:left; margin-top:6px}
+  .mod-num{font-size:1.1rem}
+  .mod-in{grid-template-columns:1fr}
+  .mod-in > *{grid-column:1}
+  .prog li{grid-template-columns:1fr; gap:8px}
+}
 
-.flagbox{
-  border:1px solid var(--flag); background:var(--flag-tint); border-radius:10px;
-  padding:19px 22px; margin:26px 0 0;
-}
-.flagbox h3{color:var(--flag); margin-bottom:8px; font-size:1rem}
-.flagbox p:last-child{margin-bottom:0}
-.flagbox p,.flagbox li{font-size:.94rem}
+/* ---------------- weekend ---------------- */
+.we{border-top:1px solid var(--rule); margin-top:4px}
+.we-row{display:grid; grid-template-columns:168px minmax(0,1fr); gap:26px; padding:22px 0; border-bottom:1px solid var(--hair)}
+.we-when{font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.we-when b{display:block; font-family:var(--disp); font-size:1.05rem; font-weight:400; letter-spacing:0; text-transform:none; color:var(--green); margin-bottom:3px}
+.we-what b{color:var(--ink); font-weight:600}
+.we-what p{font-size:.93rem; margin:0}
+.we-what .lens{font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; margin-bottom:5px; display:block}
+.l-serv{color:var(--green2)} .l-prod{color:var(--gold)} .l-comum{color:var(--muted)}
+@media (max-width:620px){.we-row{grid-template-columns:1fr; gap:8px}}
 
-.pend{display:grid; gap:12px; margin-top:26px; counter-reset:pend}
-.pend > div{
-  border:1px solid var(--rule); border-left:3px solid var(--flag); border-radius:0 8px 8px 0;
-  background:var(--surface); padding:16px 20px;
-}
-.pend h3{font-size:1rem; margin-bottom:6px}
-.pend p{font-size:.93rem; margin:0}
-.pend p + p{margin-top:.6em}
+/* ---------------- kit ---------------- */
+.kit{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:clamp(26px,3.4vw,44px)}
+.kit h4{font-size:10.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--green); margin:0 0 15px; padding-bottom:12px; border-bottom:1px solid var(--rule)}
+.kit ul{list-style:none; padding:0; margin:0; font-size:.9rem; line-height:1.55}
+.kit li{padding-left:18px; position:relative; margin-bottom:.6em}
+.kit li::before{content:""; position:absolute; left:0; top:.68em; width:8px; height:1px; background:var(--gold2)}
 
-.kit{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(248px,1fr)); margin-top:24px}
-.kit h4{
-  font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
-  color:var(--serv); margin:0 0 9px; padding-bottom:8px; border-bottom:1px solid var(--rule);
+/* ---------------- steps ---------------- */
+.steps{counter-reset:s; list-style:none; padding:0; margin:0}
+.steps > li{
+  display:grid; grid-template-columns:54px minmax(0,1fr); gap:22px;
+  padding:26px 0; border-bottom:1px solid var(--hair); margin:0;
 }
-.kit ul{list-style:none; padding:0; margin:0; font-size:.91rem}
-.kit li{padding-left:14px; position:relative; margin-bottom:.42em; line-height:1.45}
-.kit li::before{content:"—"; position:absolute; left:0; color:var(--muted)}
+.steps > li::before{
+  counter-increment:s; content:"0" counter(s);
+  font-family:var(--disp); font-size:1.25rem; color:var(--gold2); font-variant-numeric:tabular-nums;
+}
+.steps h4{font-family:var(--disp); font-weight:400; font-size:1.18rem; margin-bottom:9px; line-height:1.25}
+.steps p{font-size:.93rem; margin:0}
+.steps p + p{margin-top:.7em}
 
-footer{
-  border-top:1px solid var(--rule); padding:30px 20px 50px; max-width:1120px; margin:0 auto;
-  font-family:var(--mono); font-size:11.5px; color:var(--muted); line-height:1.7;
-}
+/* ---------------- plates (optional imagery) ---------------- */
+.plate{margin:0; padding:0}
+.plate img{width:100%; height:clamp(220px,34vw,440px); object-fit:cover}
+.plate figcaption{font-size:.82rem; color:var(--muted); padding:12px var(--pad) 0; max-width:var(--maxw); margin:0 auto}
 
-@media (max-width:620px){
-  body{font-size:16px}
-  .we-row,.day,.mod{grid-template-columns:1fr; gap:8px}
-  .mod-no{grid-row:auto; padding-top:0}
-  .mod-no b{display:inline; font-size:1rem}
-  .we-when{border-top:0; padding-top:0}
-  .lens-row{flex-direction:column}
-  .bar nav{display:none}
+/* ---------------- close ---------------- */
+.close{background:var(--green); color:#DCE5E0; padding:clamp(56px,8vw,104px) 0}
+.close .d2,.close h3{color:var(--paper)}
+.close .eyebrow{color:var(--gold2)}
+.close .secno{color:var(--gold2)}
+.close p{color:#C3D0CA}
+.close strong{color:var(--paper)}
+.close .steps > li{border-bottom-color:rgba(255,255,255,.13)}
+.close .steps > li::before{color:var(--gold2)}
+.close .steps h4{color:var(--paper)}
+.close .goldrule{background:var(--gold2)}
+
+footer{padding:40px 0 64px; border-top:1px solid var(--hair)}
+footer p{font-size:.82rem; color:var(--muted); margin:0 0 .5em; line-height:1.7}
+
+/* ---------------- motion ---------------- */
+.rise{opacity:1; transform:none}
+html.js .rise{opacity:0; transform:translateY(14px)}
+html.js .rise.in{opacity:1; transform:none; transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1)}
+@media (prefers-reduced-motion:reduce){
+  html.js .rise{opacity:1; transform:none; transition:none}
 }
-.ementa{font-size:.95rem; color:var(--ink-2)}
-.plan{display:grid; gap:1px; margin:15px 0 0; background:var(--rule); border:1px solid var(--rule); border-radius:8px; overflow:hidden}
-.plan-row{display:grid; grid-template-columns:128px 1fr; background:var(--surface)}
-.plan-when{padding:12px 13px; font-family:var(--mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; border-right:1px solid var(--rule); line-height:1.5}
-.plan-when b{display:block; font-family:var(--sans); font-size:.85rem; letter-spacing:.01em; text-transform:none; font-weight:600; margin-bottom:2px}
-.plan-what{padding:12px 15px; font-size:.9rem; line-height:1.58; color:var(--ink-2)}
-.plan-row.comum .plan-when{background:var(--surface-2); color:var(--muted)}
-.plan-row.comum .plan-when b{color:var(--ink)}
-.plan-row.serv .plan-when{background:var(--serv-tint); color:var(--serv)}
-.plan-row.serv .plan-when b{color:var(--serv)}
-.plan-row.prod .plan-when{background:var(--prod-tint); color:var(--prod)}
-.plan-row.prod .plan-when b{color:var(--prod)}
-.plan-row.dom .plan-when{background:var(--sunken); color:var(--muted)}
-.plan-row.dom .plan-when b{color:var(--ink)}
-.entrega{margin:14px 0 0; font-size:.9rem; color:var(--ink-2); padding-top:12px; border-top:1px dashed var(--rule)}
-.entrega b{font-family:var(--mono); font-size:10px; letter-spacing:.11em; text-transform:uppercase; color:var(--serv); margin-right:9px}
-.modnote{font-size:.88rem; color:var(--muted); margin:12px 0 0; font-style:italic}
-@media (max-width:620px){
-  .plan-row{grid-template-columns:1fr}
-  .plan-when{border-right:0; border-bottom:1px solid var(--rule)}
-}
+:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
 </style>
 </head>
 <body>
-<div class="bar">
-  <div class="bar-in">
-    <span class="wordmark">IEPG <em>·</em> Proposta de pós-graduação</span>
-    <nav>
-      <a href="#posicionamento">Posicionamento</a>
-      <a href="#publico">Público</a>
-      <a href="#objetivos">Objetivos</a>
-      <a href="#arquitetura">Arquitetura</a>
-      <a href="#matriz">Matriz</a>
-      <a href="#summit">Summit</a>
-      <a href="#carga">Carga</a>
-      <a href="#calendario">Calendário</a>
-      <a href="#decisoes">Decisões</a>
-    </nav>
-  </div>
+<header class="topbar"><div class="topbar-in">
+<span class="brandline">Proposta acadêmica <span>·</span> Faculdade IEPG</span>
+<nav class="topnav" aria-label="Seções da proposta">
+<a href="#oportunidade">Oportunidade</a>
+<a href="#sinergia">Sinergia</a>
+<a href="#conceito">Conceito</a>
+<a href="#matriz">Matriz curricular</a>
+<a href="#metodologia">Metodologia</a>
+<a href="#implantacao">Implantação</a>
+<a href="#proximos">Próximos passos</a>
+</nav></div></header>
+<main>
+<section class="sec" id="abertura" style="border-top:0"><div class="wrap">
+<div class="hero">
+<div class="hero-grid">
+<div>
+<span class="secno">01</span>
+<span class="eyebrow">Proposta de pós-graduação <em>lato sensu</em></span>
+<h1 class="d1">Marketing em<br>Saúde e Beleza</h1>
+<p class="lede">Uma nova especialização para conectar ciência, gestão e crescimento de negócios.</p>
+<div class="goldrule"></div>
+<p class="recipient">Documento de trabalho apresentado à direção da <b>Faculdade IEPG</b> para avaliação da criação do curso. A proposta encontra-se em estágio de projeto: não há, nesta data, aprovação institucional, credenciamento específico ou corpo docente contratado.</p>
+</div>
+<div class="hero-side">Saúde<br>Beleza<br>Ciência<br>Estratégia<br>Negócios</div>
 </div>
 
-<main>
-
-  <section class="hero">
-    <p class="eyebrow">Projeto de curso · outubro de 2026</p>
-    <h1>Marketing Saúde&nbsp;e&nbsp;Beleza</h1>
-    <p class="lead">Pós-graduação de 12 meses, 100% online e ao vivo, que forma o profissional de saúde e beleza para vender <strong>serviço e produto</strong> — a lacuna de formação de quem já domina a técnica.</p>
-
-    <div class="thesis">
-      <p>A única pós que forma o profissional de saúde e beleza para vender serviço <em>e</em> produto — porque, nesse setor, é o mesmo profissional.</p>
-    </div>
-
-    <div class="ficha">
-      <div class="ficha-h">Ficha técnica</div>
-      <dl>
-        <div><dt>Duração</dt><dd><b>12</b>meses · 12 módulos</dd></div>
-        <div><dt>Carga horária</dt><dd><b>400 h</b>360 h em módulos + 40 h de projeto</dd></div>
-        <div><dt>Por módulo</dt><dd><b>30 h</b>16 h ao vivo + 14 h assíncronas</dd></div>
-        <div><dt>Formato</dt><dd>100% online ao vivo<br>sexta à noite, sábado e domingo</dd></div>
-        <div><dt>Encontros</dt><dd>Um fim de semana por mês</dd></div>
-        <div><dt>Encerramento</dt><dd>Summit online com banca de mercado</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section id="posicionamento">
-    <span class="sec-no">01</span>
-    <h2>Posicionamento</h2>
-    <div class="prose" style="margin-top:18px">
-      <p>A IEPG já forma o profissional tecnicamente competente: estética, graduação em Farmácia, pós em Desenvolvimento de Cosméticos, pós em Farmácia Magistral. O que esse profissional não tem é negócio. Ele sabe executar o procedimento e formular o produto; não sabe precificar, captar, anunciar sem risco ético, nem levar uma linha ao canal.</p>
-      <p>O arco de carreira real do setor sustenta a tese do curso. O esteticista cresce e abre clínica; a clínica cresce e lança linha própria; o químico que lança uma marca precisa vender para clínicas — ou seja, precisa entender o negócio de serviço, que é o cliente dele. <strong>Formar só um dos lados prende o aluno nele.</strong></p>
-      <p>E há um diferencial que nenhum curso de marketing genérico pode prometer: marketing que respeita o código de ética do conselho profissional e a regulação sanitária. Para o público de saúde, esse é o medo número um — e aqui ele é conteúdo obrigatório, não brinde.</p>
-    </div>
-
-    <div class="cols">
-      <div class="card">
-        <h3>Vantagem da IEPG</h3>
-        <p>O público-alvo da nova pós já é cliente dos cursos técnicos que a instituição vende. O canal de captação mais barato está dentro de casa, e o módulo de produto dialoga com docentes e laboratório que a IEPG já opera.</p>
-      </div>
-      <div class="card">
-        <h3>Nome do curso — em aberto</h3>
-        <ul class="tight">
-          <li><strong>Marketing e Vendas em Saúde e Beleza: Produtos e Serviços</strong> — descreve com precisão</li>
-          <li><strong>MBA em Marketing e Gestão Comercial em Saúde e Beleza</strong> — mais vendável; as 400 h sustentam</li>
-          <li><strong>Marketing Científico em Saúde e Beleza</strong> — alinhado à identidade da casa</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="publico">
-    <span class="sec-no">02</span>
-    <h2>Para quem é</h2>
-    <p class="lead prose" style="margin-top:14px">Duas famílias de público, seis personas. Compartilham mais de 70% do conteúdo.</p>
-
-    <div class="cols">
-      <div class="card">
-        <h3><span class="dot s"></span>Família A — Serviço</h3>
-        <p class="note" style="margin-bottom:12px">Atende cliente ou paciente.</p>
-        <ul class="tight">
-          <li><strong>Autônomo de agenda vazia</strong> — biomédico esteta, esteticista, dentista, fisioterapeuta dermatofuncional. Não aparece cliente; vive de indicação.</li>
-          <li><strong>Dono de clínica ou salão</strong>, 2 a 10 colaboradores. Fatura, mas não sobra; não sabe o custo real do procedimento.</li>
-          <li><strong>Profissional que quer virar referência.</strong> Não sabe construir autoridade sem parecer propaganda.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3><span class="dot p"></span>Família B — Produto</h3>
-        <p class="note" style="margin-bottom:12px">Cria e vende marca.</p>
-        <ul class="tight">
-          <li><strong>Químico ou farmacêutico com marca própria na cabeça.</strong> Sabe formular; não sabe lançar, precificar nem distribuir.</li>
-          <li><strong>Gestor de produto ou brand manager</strong> em indústria cosmética, terceirista ou private label.</li>
-          <li><strong>Farmacêutico magistral e proprietário de farmácia de manipulação.</strong> Precisa vender B2B ao prescritor e B2C ao paciente final.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="prose" style="margin-top:26px">
-      <p><strong>O que une as duas famílias:</strong> todos são profissionais técnico-científicos que precisam comunicar e vender sob regulação pesada — conselho profissional, vigilância sanitária, responsabilidade técnica. É esse o eixo do curso.</p>
-    </div>
-  </section>
-
-  <section id="objetivos">
-    <span class="sec-no">03</span>
-    <h2>Objetivos e perfil do egresso</h2>
-
-    <div class="prose" style="margin-top:20px">
-      <h3>Objetivo geral</h3>
-      <p style="margin-top:10px">Formar profissionais da área de saúde e beleza capazes de <strong>planejar, executar e avaliar</strong> estratégias de marketing, de marca e de produto — da gestão comercial do consultório, clínica ou farmácia ao <strong>desenvolvimento, lançamento e gestão de marcas próprias</strong> de cosméticos e produtos de saúde —, convertendo competência técnico-científica em resultado de negócio sustentável, com rigorosa observância dos limites éticos, sanitários e regulatórios da legislação brasileira.</p>
-    </div>
-
-    <div class="prose" style="margin-top:34px">
-      <h3>Objetivos específicos</h3>
-      <ol style="margin-top:12px">
-        <li><strong>Analisar</strong> o mercado de saúde e beleza e sua cadeia de valor — indústria, terceirista, distribuição, varejo, clínica e profissional —, identificando oportunidades de posicionamento.</li>
-        <li><strong>Aplicar</strong> a legislação sanitária e os códigos de ética dos conselhos profissionais à comunicação de serviços e de produtos.</li>
-        <li><strong>Construir</strong> posicionamento e arquitetura de marca para serviço, marca pessoal e linha de produtos.</li>
-        <li><strong>Estruturar</strong> precificação, margem e portfólio a partir de custos reais, da cadeia de canal e do valor percebido.</li>
-        <li><strong>Conduzir</strong> o desenvolvimento de um produto de marca própria, do briefing técnico ao plano de lançamento, com sustentação de claims.</li>
-        <li><strong>Planejar</strong> canais de distribuição e vendas — B2B, varejo, e-commerce e magistral — e as ações de trade correspondentes.</li>
-        <li><strong>Planejar e produzir</strong> conteúdo, campanhas e mídia, online e offline, adequados às políticas das plataformas, aos veículos contratados e à regulação do setor.</li>
-        <li><strong>Desenhar</strong> processos de captação, atendimento, conversão, retenção e gestão de reputação.</li>
-        <li><strong>Interpretar</strong> indicadores de marketing e financeiros para fundamentar decisão gerencial.</li>
-        <li><strong>Elaborar</strong> plano de marketing aplicado a um negócio, serviço ou produto real do setor.</li>
-      </ol>
-    </div>
-
-    <div class="prose" style="margin-top:34px">
-      <h3>Perfil do egresso</h3>
-      <p style="margin-top:10px">Profissional apto a assumir a <strong>direção de marketing de um negócio de saúde e beleza</strong> ou a <strong>gestão de produto e de marca própria</strong> no setor — no próprio consultório, clínica ou farmácia, ou como brand manager e gestor de portfólio em indústria cosmética, terceirista ou farmácia de manipulação.</p>
-    </div>
-
-    <div class="cols">
-      <div class="card">
-        <h3>Competências demonstradas</h3>
-        <ul class="tight">
-          <li>Traduzir conhecimento técnico-científico em comunicação compreensível e lícita</li>
-          <li>Reconhecer os limites éticos, sanitários e jurídicos da publicidade em saúde e decidir dentro deles</li>
-          <li>Formar preço a partir de custo real e sustentar valor em vez de desconto</li>
-          <li>Levar um produto do conceito ao canal, com claims sustentados</li>
-          <li>Operar captação digital, mídia paga e mídia offline com orçamento definido</li>
-          <li>Construir autoridade sem recorrer a promessa de resultado</li>
-          <li>Ler os indicadores do negócio e decidir com base neles</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Campos de atuação</h3>
-        <ul class="tight">
-          <li>Clínica e consultório próprios</li>
-          <li>Gestão de marketing em clínicas e redes</li>
-          <li>Farmácia magistral e de manipulação</li>
-          <li>Indústria cosmética e terceiristas</li>
-          <li>Distribuição e varejo do setor</li>
-          <li>Consultoria e docência em áreas correlatas</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="arquitetura">
-    <span class="sec-no">04</span>
-    <h2>Arquitetura pedagógica</h2>
-    <p class="lead prose" style="margin-top:14px">Aula comum, bancada dupla. Serviço e produto convivem na mesma turma; a bifurcação acontece dentro do fim de semana, não entre trilhas.</p>
-
-    <div class="prose" style="margin-top:22px">
-      <p>O conteúdo de cada módulo é ministrado nas duas lentes — serviço e produto, lado a lado, porque a lógica é a mesma e muda só o objeto. Ninguém perde conteúdo: o aluno de serviço que daqui a dois anos lança uma linha já viu o caminho, e o de produto entende a clínica, que é o canal dele.</p>
-      <p>A divisão por meio turno também encaixa a necessidade de <strong>dois docentes por módulo</strong> que a grade já exigia: um especialista de serviço na manhã de sábado, um de indústria na tarde, cada um fechando meio dia.</p>
-    </div>
-
-    <h3 style="margin-top:38px">O fim de semana de cada módulo</h3>
-    <div class="we">
-      <div class="we-row">
-        <div class="we-when"><b>Sexta</b>19h30 — 22h30<br>4 h/a</div>
-        <div class="we-block comum">
-          <h4>Conceito comum</h4>
-          <p>A lógica que vale para serviço e produto, com caso de abertura. Todos juntos.</p>
-        </div>
-      </div>
-      <div class="we-row">
-        <div class="we-when"><b>Sábado manhã</b>9h — 12h30<br>4 h/a</div>
-        <div class="we-block serv">
-          <h4>Lente serviço</h4>
-          <p>Aplicação a consultório, clínica, salão. Toda a turma assiste.</p>
-        </div>
-      </div>
-      <div class="we-row">
-        <div class="we-when"><b>Sábado tarde</b>14h — 17h30<br>4 h/a</div>
-        <div class="we-block prod">
-          <h4>Lente produto</h4>
-          <p>Aplicação a marca, linha, canal. Toda a turma assiste.</p>
-        </div>
-      </div>
-      <div class="we-row">
-        <div class="we-when"><b>Domingo</b>9h — 12h30<br>4 h/a</div>
-        <div class="we-block split">
-          <h4>Oficina e apresentação cruzada</h4>
-          <p>Aqui a turma se divide em duas salas simultâneas — custo marginal zero no formato online. Cada aluno aplica ao objeto que ele tem hoje; no fim, cada grupo apresenta para o outro.</p>
-          <div class="salas">
-            <div class="sala s">Sala serviço</div>
-            <div class="sala p">Sala produto</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flagbox">
-      <h3>O ativo escondido: a turma é um mercado</h3>
-      <p>Juntar as duas famílias na mesma sala cria algo que trilhas separadas nunca criariam. O químico com marca própria está sentado ao lado das clínicas que são o canal dele; a esteticista, ao lado de quem fabrica o que ela revende. Na apresentação cruzada do domingo, um testa a oferta no cliente real e o outro ouve como o fornecedor pensa preço.</p>
-      <p>É argumento de venda, de retenção e de preço — e não se compra em curso gravado.</p>
-    </div>
-  </section>
-
-  <section id="matriz">
-    <span class="sec-no">05</span>
-    <h2>Matriz curricular</h2>
-    <p class="lead prose" style="margin-top:14px">Doze módulos, um por mês, 30 horas cada. Cada módulo abaixo traz a ementa, o que será abordado em cada bloco do fim de semana e o entregável que o aluno leva no domingo.</p>
-
-    <div class="key" style="margin-top:24px">
-      <span><i class="dot s"></i>Lente serviço</span>
-      <span><i class="dot p"></i>Lente produto</span>
-      <span><i class="dot n"></i>Conceito comum e oficina de domingo</span>
-    </div>
-
-    <div class="mods">
-
-      <div class="mod">
-        <div class="mod-no">M<b>01</b></div>
-        <div>
-          <h3>Mercado, Cadeia de Valor e Consumidor de Saúde e Beleza</h3>
-          <div class="mod-mes">Março · 30 h</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Panorama econômico do setor de saúde e beleza no Brasil. Estrutura da cadeia produtiva e distribuição de margem entre os elos. Comportamento do consumidor de procedimento e de produto. Jornada de compra e pontos de decisão. Sazonalidade e ticket médio. Segmentação e identificação de nichos.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">Dimensão e dinâmica do mercado brasileiro de saúde e beleza. Os subsetores e como se relacionam. A cadeia de valor completa — indústria, terceirista, envasador, distribuidor, representante, varejo, farmácia, clínica, profissional autônomo — e onde fica a margem em cada elo. Serviço como bem de confiança e produto como bem de experiência: por que isso muda tudo no marketing.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">A praça e o raio real de deslocamento do cliente. Densidade e concorrência no entorno. O consumidor de procedimento: autoimagem, motivação, medo, ciclo de decisão e tempo de maturação. Jornada do paciente-cliente, do primeiro contato à recompra. Sazonalidade da agenda. Ticket médio e frequência por tipo de procedimento. Quem é o cliente que dá lucro e quem é o que dá prejuízo.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">O consumidor de cosmético: hábito, rotina, substituição e fidelidade de marca. Categorias e subcategorias do mercado. O profissional de saúde como influenciador de compra e como canal. Curva de adoção de ativo novo. Sazonalidade de categoria. Sell-in e sell-out: por que quem consome a marca não é quem paga a primeira nota fiscal.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Diagnóstico do próprio negócio: posição na cadeia, concorrentes reais, público atendido hoje, sazonalidade observada. Construção do mapa da jornada, marcando os pontos em que o cliente desiste.</div></div>
-          </div>
-          <p class="entrega"><b>Entregável</b>Diagnóstico de negócio e mapa da jornada do cliente.</p>
-        </div>
-      </div>
-
-      <div class="mod flagged">
-        <div class="mod-no">M<b>02</b></div>
-        <div>
-          <h3>Marketing Ético e Regulatório em Saúde e Beleza</h3>
-          <div class="mod-mes">Abril · 30 h · módulo-âncora</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> As três camadas de regra que incidem sobre a comunicação do setor: código de ética do conselho profissional, regulação sanitária e defesa do consumidor. Publicidade de serviço de saúde e publicidade de produto. Uso de imagem. Sustentação de claims. Proteção de dado sensível. Responsabilidade civil e profissional pela comunicação.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">Por que a publicidade em saúde é regulada e qual o bem jurídico protegido. As três camadas de regra e como se sobrepõem. Publicidade, divulgação técnica e conteúdo educativo: onde está a fronteira. O conceito de promessa de resultado como centro do risco. Responsabilidade do profissional pelo conteúdo produzido por terceiros — agência, social media, influenciador. LGPD e dado de saúde como dado sensível: base legal, consentimento e guarda.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">Os códigos de ética e a publicidade por profissão — medicina, odontologia, farmácia, biomedicina, enfermagem, nutrição, química e estética: o que cada conselho permite, o que veda e o que deixa em zona cinzenta. Antes-e-depois: hipóteses de uso, ressalvas e termo de autorização de imagem. Sensacionalismo, autopromoção e concorrência desleal. Divulgação de preço e de promoção em serviço de saúde. Comunicação de equipamento e de técnica. O que caracteriza invasão de competência e exercício ilegal na comunicação.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">Classificação de risco de cosméticos e o que muda entre notificação e registro. Rotulagem obrigatória e informação ao consumidor. Claims: que evidência sustenta qual frase, o que é claim terapêutico vedado a cosmético, o que exige ensaio. Dossiê de produto e documentação de suporte. Material promocional e publicidade de produto. Responsabilidade técnica e o papel do RT. Produto importado e produto de terceirista: de quem é a responsabilidade. Comunicação na farmácia magistral e a vedação de publicidade de manipulado.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Auditoria de conformidade do próprio material: perfis sociais, site, material impresso, rótulo, anúncio ativo. Cada peça classificada em verde, amarelo ou vermelho, com plano de correção e prazo.</div></div>
-          </div>
-          <p class="modnote">Pede dois docentes: advogado de direito médico e sanitário, e um responsável técnico com vivência de registro. O conteúdo precisa ser revisado contra os textos vigentes a cada turma — é o módulo em que não se pode errar, porque é a promessa central do curso.</p>
-          <p class="entrega"><b>Entregável</b>Auditoria de conformidade e plano de correção.</p>
-        </div>
-      </div>
-
-      <div class="mod">
-        <div class="mod-no">M<b>03</b></div>
-        <div>
-          <h3>Marca: Posicionamento, Arquitetura e Marca Pessoal</h3>
-          <div class="mod-mes">Maio · 30 h</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Segmentação, nicho e proposta de valor. Posicionamento e diferenciação. Identidade verbal e visual. Arquitetura de marca aplicada a serviço, pessoa e produto. Construção de autoridade científica. Registro de marca. Gestão de reputação.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">Segmentação, nicho e o custo de querer atender todo mundo. Proposta de valor e diferenciação. Posicionamento como escolha do que não ser. Arquétipos de marca. Naming e registro no INPI: classes, busca de anterioridade, risco de usar um nome já registrado. Identidade verbal e tom de voz para quem fala de ciência. Briefing de identidade visual: o que o designer precisa receber.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">Marca pessoal do profissional de saúde: por que, nesse setor, a pessoa é o produto — e o risco que isso cria. Marca pessoal e marca da clínica: quando unir, quando separar, e o perigo de um negócio que não sobrevive à saída do sócio. Construção de autoridade científica: titulação, produção, casuística, dados, didática. Escolha de nicho de especialidade, porque não existe autoridade em tudo. Prova social lícita. Canais de autoridade além da rede social — palestra, congresso, docência, podcast, mídia espontânea, publicação técnica, atuação em associação. Assessoria de imprensa para profissional de saúde. Reputação pessoal e sobre-exposição: o limite entre educar e vender.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">Arquitetura de marca: marca única, marca por linha, submarca, marca endossada. Marca da clínica e marca de produto convivendo. Nome de linha e nome de produto. Portfólio e o papel de cada item — entrada, margem, imagem. Embalagem como suporte de marca. Private label e marca de terceirista: de quem é a marca e de quem é a fórmula. Registro por classe. Licenciamento e co-branding com profissional de referência.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Preenchimento da plataforma de marca: nicho, proposta de valor, arquétipo, tom de voz, arquitetura escolhida e justificada. Checagem de disponibilidade do nome.</div></div>
-          </div>
-          <p class="entrega"><b>Entregável</b>Plataforma de marca e definição de arquitetura.</p>
-        </div>
-      </div>
-
-      <div class="mod">
-        <div class="mod-no">M<b>04</b></div>
-        <div>
-          <h3>Custos, Preço, Margem e Indicadores do Negócio</h3>
-          <div class="mod-mes">Junho · 30 h</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Estrutura de custo em serviço e em produto. Formação de preço por custo e por valor. Margem de contribuição e ponto de equilíbrio. Cascata de preço no canal. Política de desconto e de reajuste. Indicadores de marketing e financeiros e rotina de decisão.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">Markup e margem: a confusão que faz empresa lucrativa no papel quebrar no caixa. Custo fixo, variável e margem de contribuição. Ponto de equilíbrio. Formação de preço por custo e por valor percebido. Ancoragem e elasticidade. O impacto real do desconto: quanto volume a mais é preciso vender para compensar 10%, 20% e 30%. Política de reajuste e repasse de custo. Introdução a indicadores e à rotina de decisão gerencial.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">Custo direto do procedimento: insumo, descartável, ativo, amortização de equipamento. Custo de hora-sala e de hora-profissional. Rateio de custo fixo e preço mínimo defensável. Pacote, protocolo e plano de manutenção. Comissão e repasse ao profissional executante. Taxa de ocupação de agenda e o custo do horário vazio. Produtividade por sala e por profissional. DRE da clínica e os indicadores que a governam.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">Custo industrial: formulação, embalagem primária e secundária, rótulo, envase, lote mínimo, perda. Frete e carga tributária. A cascata de preço no canal — custo industrial, preço fábrica, distribuidor, varejo, consumidor — e quanto cada elo precisa ganhar para querer vender o seu produto. Preço sugerido e preço praticado. Mix de portfólio e margem ponderada. Giro, cobertura de estoque e capital imobilizado em lote.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Reprecificação do próprio serviço ou produto na planilha, com os números reais do aluno. Montagem do painel de indicadores que ele vai acompanhar mensalmente.</div></div>
-          </div>
-          <p class="entrega"><b>Entregável</b>Nova tabela de preços e painel de oito indicadores.</p>
-        </div>
-      </div>
-
-      <div class="mod">
-        <div class="mod-no">M<b>05</b></div>
-        <div>
-          <h3>Conteúdo, Storytelling e Produção para Redes Sociais</h3>
-          <div class="mod-mes">Julho · 30 h</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Tradução de conteúdo técnico para linguagem leiga. Arquitetura de conteúdo e calendário editorial. Roteiro e narrativa para vídeo curto. Produção audiovisual com recursos próprios. IA aplicada à produção. Métricas de conteúdo. Limites regulatórios por formato.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">Tradução do técnico para o leigo sem perder precisão — o problema central de quem vem da ciência. Conteúdo de autoridade e conteúdo de venda: proporção e sequência. Pilares editoriais e linhas de conteúdo. Estrutura narrativa, gancho e retenção. Anatomia de um roteiro de vídeo curto. O que cada formato faz: Reels, carrossel, stories, live, vídeo longo, podcast. IA no roteiro, na legenda, no corte e no reaproveitamento. Métricas que indicam negócio e métricas que só alimentam vaidade. Limites do conselho aplicados formato por formato.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">Conteúdo de procedimento e de educação do paciente. Como mostrar resultado dentro da regra. Bastidor de atendimento. Depoimento e relato de caso. O conteúdo que atrai o cliente certo e o que atrai caçador de desconto. Produção no consultório: luz, áudio, enquadramento, fundo, roupa. A rotina que funciona para quem atende oito horas por dia — bloco único de gravação mensal, não produção diária.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">Conteúdo de produto: ativo, textura, aplicação, resultado. Still, macro e vídeo de uso. Conteúdo técnico dirigido ao profissional e conteúdo de consumo dirigido ao paciente — dois públicos, duas linguagens. Conteúdo científico de sustentação de claim. Conteúdo de lançamento. Material para o canal e para o prescritor. Conteúdo gerado por usuário e review: como estimular sem comprar elogio.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Gravação ao vivo, cada aluno no próprio espaço de trabalho, com correção de luz, áudio e enquadramento em tempo real — aplicação que um estúdio de aula não reproduz. Montagem do calendário editorial de 90 dias.</div></div>
-          </div>
-          <p class="entrega"><b>Entregável</b>Calendário de 90 dias e seis peças gravadas.</p>
-        </div>
-      </div>
-
-      <div class="mod">
-        <div class="mod-no">M<b>06</b></div>
-        <div>
-          <h3>Planejamento de Mídia e Custos de Mídia — online e offline</h3>
-          <div class="mod-mes">Agosto · 30 h</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Planejamento de mídia e definição de verba. Métricas e moeda de negociação. Veículos offline: televisão, rádio, mídia exterior, impresso, ponto de venda e eventos. Negociação com veículos. Formas de compra. Mensuração de mídia offline. Integração entre online e offline.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">O papel da mídia no plano e a diferença entre objetivo de mídia e objetivo de marketing. Verba: como definir — percentual do faturamento, por objetivo, por participação — e como ratear entre canais. Cobertura, frequência e continuidade. A moeda da mídia: alcance, GRP e TRP, CPM, custo por ponto, CPV, share of voice, afinidade. Como ler a tabela de preço de um veículo. Negociação: tabela e preço praticado, desconto de agência, bonificação, permuta, pacote — e qual o poder de barganha real de um anunciante pequeno. Agência, compra direta ou representante de veículo. Mensuração de offline: cupom, número exclusivo por veículo, landing dedicada, lift de busca orgânica, pesquisa de recall, teste geográfico com praça de controle. Restrição regulatória na mídia offline em saúde.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">Mídia local: rádio de bairro e testemunhal de locutor, que converte muito em saúde de proximidade. Televisão regional como opção viável para clínica de praça única. Mídia exterior no entorno — outdoor, mobiliário urbano, painel digital, elevador e condomínio, busdoor. Revista de condomínio e jornal local. Mala direta geográfica. Patrocínio de evento de bairro e de associação. Parceria e permuta local. Como montar um plano de mídia de clínica com verba pequena e ainda conseguir medir.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">Mídia de cobertura: televisão aberta e fechada, faixa horária, patrocínio e merchandising em programa. Rádio em rede. Mídia exterior de cobertura. Revista segmentada, publicação de conselho e mídia científica dirigida ao prescritor. Mídia de ponto de venda e encarte de rede de farmácia. Patrocínio de congresso e feira do setor. Verba de lançamento e verba de sustentação: proporções e duração.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Construção do plano de mídia próprio: objetivo, praça, período, veículos, formatos, verba por canal e a forma de mensuração de cada um.</div></div>
-          </div>
-          <p class="entrega"><b>Entregável</b>Plano de mídia com orçamento e plano de mensuração.</p>
-        </div>
-      </div>
-
-      <div class="mod">
-        <div class="mod-no">M<b>07</b></div>
-        <div>
-          <h3>Mídia Paga, Tráfego Local e Performance</h3>
-          <div class="mod-mes">Setembro · 30 h</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Estrutura de campanhas em plataformas de mídia paga. Políticas de publicidade aplicadas a saúde e beleza. Públicos, criativos e testes. Tráfego geolocalizado e presença local. Mídia para e-commerce e catálogo. Indicadores de performance e ponto de corte.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">Estrutura de conta e de campanha. Objetivo de campanha e o que cada um realmente otimiza. Públicos frio, morno, quente e semelhante. Criativo e teste: o que testar e em que ordem. Orçamento, fase de aprendizado e escala. Políticas de publicidade das plataformas para saúde e beleza — e como não tomar bloqueio de conta. Conta bloqueada: prevenção, recurso e plano B. Pixel, API de conversão e LGPD. CAC, LTV, ROAS, payback e ponto de corte de uma campanha. IA na análise de resultado.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">Campanha geolocalizada: raio, exclusão de área, público local. Google Business Profile completo — categorias, serviços, fotos, posts, perguntas, agendamento. Captação sistemática e resposta de avaliações, e o peso delas na decisão local. SEO local e página por procedimento e por bairro. Clique-para-WhatsApp como destino. Campanha de inauguração e de nova unidade. Formulário e conversa: qual converte melhor em saúde. Métricas de serviço: custo por avaliação agendada, taxa de comparecimento, conversão em procedimento. O que dá para medir com verba pequena.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">Campanha de e-commerce e catálogo de produto. Feed e saúde do catálogo. Marketplace e mídia dentro do marketplace. Retargeting de carrinho e de visualização. Campanha de lançamento e campanha de recompra. Assinatura e clube. Campanha B2B para captar clínica e revendedor. Métricas de produto: custo de aquisição, ticket, taxa de recompra e margem após mídia.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Campanha real estruturada e publicada antes do fim do encontro, com verba de teste definida e critério de leitura de resultado combinado.</div></div>
-          </div>
-          <p class="entrega"><b>Entregável</b>Campanha no ar com verba de teste.</p>
-        </div>
-      </div>
-
-      <div class="mod">
-        <div class="mod-no">M<b>08</b></div>
-        <div>
-          <h3>Funil, CRM, Atendimento e Retenção</h3>
-          <div class="mod-mes">Outubro · 30 h</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Desenho de funil para decisão de alto envolvimento. CRM e registro de relacionamento. Venda consultiva e tratamento de objeção. Experiência e pós-atendimento. Retenção e recompra. Gestão de reputação e protocolo de crise.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">Desenho de funil para decisão de alto envolvimento. Etapas, gargalo e taxa de passagem. CRM: o que registrar e para quê. Atendimento humano e automatizado — onde automatizar ajuda e onde destrói confiança. Venda consultiva e diagnóstico de necessidade. Objeção de preço, de medo e de tempo. Expectativa irreal e o dever ético de recusar. Experiência e pós-atendimento. Avaliações públicas e resposta a reclamação. Influenciadores e permuta: critérios, contrato e risco. Protocolo de crise — resultado insatisfatório, reação adversa, exposição negativa, recall.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">WhatsApp como canal principal: tempo de resposta, roteiro, qualificação. A consulta de avaliação como etapa de decisão, não como formalidade. Orçamento e follow-up sem perseguição. Falta e remarcação: política e redução. Reativação de base inativa. Recorrência de manutenção e plano de acompanhamento. Programa de indicação. Pesquisa de satisfação. A equipe que atende e precisa vender: treinamento e incentivo.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">Funil B2B: prospecção, carteira, ciclo de venda longo, proposta e negociação. Representante e distribuidor como parte do funil. Pós-venda de canal e giro no cliente — vender para o canal não é vender ao consumidor. Recompra e assinatura no direto ao consumidor. Atendimento de SAC e de notificação de reação adversa. Relacionamento com o prescritor na farmácia magistral. Gestão de reputação de marca de produto.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Desenho do fluxo de atendimento ponta a ponta e redação dos scripts, com dramatização em dupla para testar objeção real.</div></div>
-          </div>
-          <p class="entrega"><b>Entregável</b>Fluxo de atendimento e oito scripts.</p>
-        </div>
-      </div>
-
-      <div class="mod">
-        <div class="mod-no">M<b>09</b></div>
-        <div>
-          <h3>Canais, Distribuição, Política Comercial e Trade</h3>
-          <div class="mod-mes">Novembro · 30 h</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Desenho e seleção de canais. Intermediação, cobertura e capilaridade. Política comercial e conflito de canal. Estrutura e remuneração de força de vendas. Trade marketing e ponto de venda. Treinamento de canal.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">Desenho de canal: qual canal serve qual público e a que custo. Venda direta e venda intermediada. Cobertura, capilaridade e curva de ganho por canal. Conflito de canal — quando o e-commerce próprio briga com o varejo que revende — e como estruturar preço para não matar o parceiro: o erro clássico de marca nova. Política comercial: tabela por canal, prazo, desconto por volume, bonificação, verba de canal, exclusividade territorial. Contrato e documentação. Logística e frete no preço. Estrutura de vendas e remuneração.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">Revenda de cosmético no consultório: margem, mix, exposição, estoque e treinamento da equipe — uma das margens mais altas e mais ignoradas de uma clínica. O profissional como canal de uma marca: o que negociar, que condição pedir, que risco assumir. Parceria local e indicação cruzada. Convênio corporativo e pacote para empresa. Venda de pacote e de protocolo como canal próprio.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">Distribuidor regional, representante autônomo e equipe própria: quando cada um. Varejo físico, rede de farmácia e drogaria. Farmácia magistral como canal. E-commerce próprio e marketplace. Exportação. Trade marketing: gôndola e posicionamento em prateleira, display, encarte de rede, visual merchandising, experimentação e amostragem. Treinamento e argumentário para quem vende no balcão. Patrocínio de congresso e feira como canal comercial. Metas, comissão e gestão de funil B2B.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Desenho do mapa de canais do próprio negócio e redação da política comercial, com tabela diferenciada e regra de conflito.</div></div>
-          </div>
-          <p class="entrega"><b>Entregável</b>Mapa de canais e política comercial escrita.</p>
-        </div>
-      </div>
-
-      <div class="mod">
-        <div class="mod-no">M<b>10</b></div>
-        <div>
-          <h3>Desenvolvimento de Produto e Marca Própria</h3>
-          <div class="mod-mes">Dezembro, 1º fim de semana · 30 h</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Gestão de produto aplicada a saúde e beleza. Identificação de oportunidade e validação de conceito. Caminhos de desenvolvimento e escolha de parceiro produtivo. Briefing técnico. Embalagem. Sustentação de claims e caminho regulatório. Viabilidade econômica do lote.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">O que faz um gestor de produto. Identificação de oportunidade e validação de conceito antes de gastar com fórmula. O conceito de produto e o papel do briefing. Custo, prazo e risco de cada caminho de desenvolvimento. Propriedade da fórmula e propriedade da marca: o que você leva se trocar de fabricante. Cronograma realista de um lançamento, do conceito à prateleira.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">O protocolo próprio como produto da clínica: nomear, padronizar, registrar como marca e vender como pacote — é o primeiro produto que uma clínica lança, e vem antes de qualquer cosmético. Serviço por assinatura. Curadoria e revenda com marca da clínica. Quando faz sentido ter linha própria e quando é melhor revender a de outro. Parceria com terceirista para linha de clínica em volume pequeno: o que é viável e o que não é.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">Private label, formulação própria e marca compartilhada: custo, controle e exclusividade de cada caminho. Seleção e negociação com terceirista e envasador — capacidade, lote mínimo, prazo, exclusividade, sigilo. O briefing técnico para o laboratório, a peça que liga marketing e P&amp;D. Escolha de ativo e de conceito de fórmula. Embalagem: primária, secundária, custo, fornecedor, lote mínimo. Dossiê e sustentação de claim — que ensaio sustenta qual frase. Caminho regulatório e documentação. Custo de desenvolvimento e ponto de equilíbrio do primeiro lote.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Redação do briefing técnico de um produto real e montagem do cronograma de desenvolvimento, com os pontos de decisão e de custo marcados.</div></div>
-          </div>
-          <p class="modnote">Ponte direta com as pós de Desenvolvimento de Cosméticos e Farmácia Magistral — docente e laboratório que a IEPG já tem.</p>
-          <p class="entrega"><b>Entregável</b>Briefing técnico de produto e cronograma de lançamento.</p>
-        </div>
-      </div>
-
-      <div class="mod">
-        <div class="mod-no">M<b>11</b></div>
-        <div>
-          <h3>Campanhas, Lançamento e Crescimento</h3>
-          <div class="mod-mes">Janeiro, último fim de semana · 30 h</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Anatomia de campanha e calendário sazonal do setor. Oferta de entrada e escada de valor. Promoção e preço. Ocupação de capacidade em serviço. Go-to-market de produto. Métricas de campanha e de lançamento. Caminhos de expansão.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Conceito comum</div><div class="plan-what">Anatomia de uma campanha: objetivo, público, oferta, mensagem, canal, verba, prazo e mensuração. O calendário sazonal do setor de saúde e beleza. Oferta de entrada e escada de valor. Promoção sem destruir preço — e o que fazer em vez de desconto. Critério de encerramento e de repetição de campanha. Caminhos de crescimento e os pré-requisitos de cada um.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado manhã</b>Lente serviço</div><div class="plan-what">A agenda como ativo: capacidade, ocupação e o custo do horário vazio. Campanha para horário morto, com oferta diferenciada por faixa horária. O calendário do setor na prática — janeiro de recomeço, pré-verão com corpo e depilação, inverno de peeling e laser, Dia das Mães, temporada de noivas, Black Friday, pré-férias. Lançamento de novo procedimento e a campanha que amortiza o equipamento recém-financiado. Campanha de reativação e programa de indicação. Avaliação gratuita: quando converte e quando atrai o cliente errado. Campanha interna para a equipe. Expansão: nova sala, nova unidade, franquia.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado tarde</b>Lente produto</div><div class="plan-what">Go-to-market de linha: preço de entrada, pré-venda e lista de espera, amostragem, kit de lançamento, material de apoio. Sell-in e sell-out, e por que um lançamento pode parecer sucesso na nota e fracassar na prateleira. Lançamento para profissional e lançamento para consumidor final. Campanha de distribuição e de ativação de canal. Métricas de lançamento e critério de descontinuação de produto. Extensão de linha e entrada em nova categoria. Exportação.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Oficina</div><div class="plan-what">Montagem da campanha ou do lançamento do aluno, com verba, calendário, peças previstas e métricas de acompanhamento.</div></div>
-          </div>
-          <p class="entrega"><b>Entregável</b>Plano de campanha ou de lançamento.</p>
-        </div>
-      </div>
-
-      <div class="mod flagged">
-        <div class="mod-no">M<b>12</b></div>
-        <div>
-          <h3>Summit Saúde &amp; Beleza — Laboratório, Pitch e Banca</h3>
-          <div class="mod-mes">Fevereiro · 30 h · evento online de encerramento</div>
-        </div>
-        <div class="mod-body">
-          <p class="ementa"><strong>Ementa.</strong> Módulo integrador em formato de evento. Consolidação do Projeto Aplicado, apresentação a banca de avaliadores do setor e painéis com convidados de mercado. Integra os conteúdos dos onze módulos anteriores em uma entrega única e defendida.</p>
-          <div class="plan">
-            <div class="plan-row comum"><div class="plan-when"><b>Sexta</b>Aberta ao público</div><div class="plan-what">Painéis com convidados do mercado — dono de clínica que escalou, advogado de direito médico, marca de cosmético, gestor de mídia do setor. Vitrine institucional da IEPG e abertura das inscrições da turma seguinte. Transmissão aberta e gratuita.</div></div>
-            <div class="plan-row serv"><div class="plan-when"><b>Sábado</b>Bancada serviço</div><div class="plan-what">Laboratório de campanha de captação: finalização da oferta, do criativo, da campanha e do funil, com consultoria dos avaliadores convidados.</div></div>
-            <div class="plan-row prod"><div class="plan-when"><b>Sábado</b>Bancada produto</div><div class="plan-what">Laboratório de plano de lançamento: finalização do posicionamento, do preço, do canal e do cronograma, com consultoria dos avaliadores convidados.</div></div>
-            <div class="plan-row dom"><div class="plan-when"><b>Domingo</b>Pitch e banca</div><div class="plan-what">Defesa individual do Projeto Aplicado diante de banca mista — dois docentes do curso e um convidado de mercado. Apresentação cruzada entre as duas famílias, premiação e encerramento de turma.</div></div>
-          </div>
-          <p class="entrega"><b>Entregável</b>Projeto Aplicado defendido em banca.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="prose" style="margin-top:30px">
-      <p class="note"><strong>Projeto Aplicado, transversal.</strong> Orientação a partir do módulo 6. Cada módulo entrega uma peça do plano; no módulo 12 o trabalho já está montado. O aluno de serviço entrega um plano de captação e crescimento; o de produto, um plano de lançamento de marca.</p>
-    </div>
-  </section>
-
-  <section id="summit">
-    <span class="sec-no">06</span>
-    <h2>O Summit de encerramento</h2>
-    <p class="lead prose" style="margin-top:14px">Mesmo ritmo sexta-sábado-domingo, mas acumulando três funções: encerramento de turma, banca do Projeto Aplicado e captação da turma seguinte.</p>
-
-    <div class="summit">
-      <h3>Summit Saúde &amp; Beleza IEPG</h3>
-      <p class="note">Evento online anual, com produção de evento e não de aula: apresentador, cenário, convidados de mercado.</p>
-
-      <div class="days">
-        <div class="day">
-          <div><b>Sexta</b>19h30 — 22h30</div>
-          <div>
+<dl class="spec">
+<div><dt>Duração</dt><dd>12 <small>meses, em doze módulos mensais</small></dd></div>
+<div><dt>Carga horária</dt><dd>400 h <small>360 h em módulos e 40 h de Projeto Aplicado</small></dd></div>
+<div><dt>Modalidade</dt><dd>Online <small>ao vivo, com encontros de sexta a domingo</small></dd></div>
+<div><dt>Por módulo</dt><dd>30 h <small>16 h síncronas e 14 h assíncronas</small></dd></div>
+<div><dt>Encerramento</dt><dd>Summit <small>evento online com banca de avaliação</small></dd></div>
+</dl>
+</div></div></section>
+<figure class="plate rise" hidden data-src="img/01-abertura.jpg"><img alt="Bancada de laboratório com vidraria, frascos de cosméticos e microscópio"><figcaption>Imagem ilustrativa. Substituir por fotografia institucional da Faculdade IEPG quando disponível.</figcaption></figure>
+<section class="sec " id="oportunidade"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">02</span><h2 class="d2">Oportunidade estratégica para a Faculdade&nbsp;IEPG</h2>
+<p class="lede">Por que esta proposta merece ser considerada pela direção.</p>
+</div><div class="sec-body rise"><p class="lede" style="margin-bottom:30px">Esta proposta não abre uma frente nova na Faculdade IEPG. Ela liga frentes que a instituição já opera.</p>
+<p>A faculdade já forma o profissional tecnicamente competente — em estética e cosmética, em desenvolvimento de produtos cosméticos, em farmácia magistral, em assuntos regulatórios. O que a formação atual não entrega, em nenhum desses cursos, é a dimensão de negócio: precificar, posicionar, comunicar dentro da regra, distribuir e gerir.</p>
+<p>É uma lacuna estrutural do setor, e ela aparece exatamente no momento em que o egresso tenta transformar competência técnica em negócio próprio.</p>
+<div class="quote">A proposta ocupa um espaço vazio do portfólio sem competir com nenhum curso existente — e tem, como primeiro público, o egresso dos cursos que a instituição já oferece.</div>
+<div class="pillars">
+<div class="pillar"><h4>Sinergia acadêmica</h4><p>O curso se apoia em áreas que a faculdade já domina e as aplica a uma competência que nenhuma delas cobre hoje. Parte do corpo docente necessário já está na casa.</p></div>
+<div class="pillar"><h4>Diferenciação de portfólio</h4><p>Não há, no portfólio atual, formação voltada à dimensão comercial e de marketing do setor de saúde e beleza. A instituição já opera MBAs de perfil gerencial, o que dá precedente institucional ao formato.</p></div>
+<div class="pillar"><h4>Expansão de público</h4><p>Atinge o egresso dos cursos atuais e atrai profissionais de marketing, gestão e indústria cosmética que hoje não encontram formação específica para o setor.</p></div>
+</div></div></div></div></section>
+<section class="sec " id="justificativa"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">03</span><h2 class="d2">Justificativa e contexto do&nbsp;mercado</h2>
+<p class="lede">A lacuna que o curso se propõe a preencher, e por que ela é estrutural.</p>
+</div><div class="sec-body rise"><p>O setor de saúde e beleza se organiza em uma cadeia longa: indústria, terceirista e envasador, distribuidor, representante, varejo, farmácia, clínica e profissional autônomo. O mesmo profissional transita por vários desses elos ao longo da carreira — e raramente foi formado para nenhum deles do ponto de vista de negócio.</p>
+<h3 class="d3" style="margin:38px 0 16px">A lacuna de formação</h3>
+<p>A formação técnica existente prepara para executar: o procedimento, a formulação, a manipulação, o protocolo. Não prepara para formar preço a partir de custo real, para construir posicionamento, para planejar mídia, para desenhar canal de distribuição ou para ler os indicadores do próprio negócio.</p>
+<p>O resultado é conhecido na prática: profissionais tecnicamente excelentes com agenda ociosa, clínicas que faturam e não têm margem, e formulações competentes que não chegam ao mercado.</p>
+<h3 class="d3" style="margin:38px 0 16px">A restrição que torna o problema específico</h3>
+<p>A comunicação do setor é regulada em três camadas simultâneas: o código de ética do conselho profissional, a regulação sanitária e o Código de Defesa do Consumidor. Um curso de marketing generalista não cobre nenhuma delas; um curso técnico não cobre marketing.</p>
+<p><strong>É nessa interseção que a proposta se posiciona</strong> — e é o que a torna difícil de replicar por escolas de marketing e por instituições sem tradição em saúde.</p>
+<h3 class="d3" style="margin:38px 0 16px">O arco de carreira</h3>
+<p>O profissional de estética cresce e abre clínica; a clínica cresce e lança linha própria; o químico ou farmacêutico que lança uma marca precisa vender para clínicas — ou seja, precisa entender o negócio de serviço, que é o cliente dele. Formar apenas um dos lados prende o aluno nele.</p>
+<div class="note"><h4>Sobre dados de mercado</h4><p>Esta proposta não apresenta estimativas de tamanho de mercado, taxas de crescimento ou projeções financeiras. Números dessa natureza exigem fonte verificável e estudo próprio, e serão levantados caso a direção decida avançar com o projeto.</p><p>Os argumentos acima são estruturais e podem ser conferidos no próprio portfólio da instituição e na prática dos seus egressos.</p></div></div></div></div></section>
+<section class="sec " id="sinergia"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">04</span><h2 class="d2">Sinergia com o portfólio acadêmico</h2>
+<p class="lede">Onde a proposta se encaixa no que a Faculdade IEPG já oferece.</p>
+</div><div class="sec-body rise"><p class="lede" style="margin-bottom:30px">Cada curso do portfólio atual alimenta a nova pós-graduação com um público específico — e dois deles fornecem também base docente.</p>
+<div class="tbl"><table><thead><tr><th>Curso já oferecido</th><th>Como se conecta</th><th>Módulos</th></tr></thead><tbody><tr><td><strong>Estética e Cosmética <span class="muted small">— graduação</span></strong></td><td>Egressos que atuam em atendimento e precisam de captação, precificação e autoridade profissional.</td><td class="num">01 · 03 · 07 · 11</td></tr><tr><td><strong>Saúde Estética Avançada <span class="muted small">— pós-graduação</span></strong></td><td>Profissionais de clínica com demanda por gestão de agenda, margem e retenção.</td><td class="num">04 · 08 · 11</td></tr><tr><td><strong>Desenvolvimento de Produtos Cosméticos <span class="muted small">— pós-graduação e curso livre</span></strong></td><td>Quem já sabe formular e precisa levar o produto ao mercado: marca, preço, canal e lançamento.</td><td class="num">03 · 04 · 09 · 10</td></tr><tr><td><strong>Farmácia Magistral — Manipulação na Prática <span class="muted small">— pós-graduação e curso livre</span></strong></td><td>Comunicação com o prescritor, captação do paciente final e limites da divulgação de manipulado.</td><td class="num">02 · 08 · 09</td></tr><tr><td><strong>Assuntos Regulatórios <span class="muted small">— pós-graduação e curso livre</span></strong></td><td>Base docente e conceitual já existente na casa para o módulo-âncora do curso.</td><td class="num">02 · 10</td></tr><tr><td><strong>Farmácia Clínica e Prescrição Farmacêutica <span class="muted small">— pós-graduação</span></strong></td><td>Relação com o prescritor como canal e como público de comunicação técnica.</td><td class="num">09</td></tr><tr><td><strong>MBA em Gestão Hospitalar e Serviços de Saúde <span class="muted small">— MBA</span></strong></td><td>Precedente institucional de curso de perfil gerencial voltado à saúde.</td><td class="num">Formato</td></tr></tbody></table></div>
+<p class="src">Portfólio conforme o site institucional da Faculdade IEPG, consultado em 9 de outubro de 2026. A indicação de módulos é uma sugestão de leitura desta proposta, não uma definição acadêmica.</p>
+<div class="note"><h4>Consequência prática</h4><p>A captação da primeira turma não depende de aquisição de público novo. Ela pode começar pela base de alunos e egressos dos cursos existentes, que é o canal de menor custo disponível à instituição.</p><p>E dois módulos — o regulatório e o de desenvolvimento de produto — podem ser construídos com docentes que já lecionam na casa.</p></div></div></div></div></section>
+<section class="sec " id="conceito"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">05</span><h2 class="d2">Conceito e objetivos da pós-graduação</h2>
+<p class="lede">A integração entre saúde, beleza, ciência, comunicação e negócios.</p>
+</div><div class="sec-body rise"><h3 class="block-h">Conceito acadêmico</h3>
+<p>O curso integra cinco domínios que, no setor de saúde e beleza, operam juntos na prática e separados na formação: <strong>saúde, beleza, ciência, comunicação e negócios</strong>. A espinha dorsal é a tradução — converter conhecimento técnico-científico em decisão de negócio e em comunicação compreensível, precisa e lícita.</p>
+<div class="quote">Formar o profissional de saúde e beleza para vender serviço <em>e</em> produto — porque, nesse setor, é o mesmo profissional.</div>
+<h3 class="block-h" style="margin-top:44px">Objetivo geral</h3>
+<p>Formar profissionais da área de saúde e beleza capazes de <strong>planejar, executar e avaliar</strong> estratégias de marketing, de marca e de produto — da gestão comercial do consultório, clínica ou farmácia ao <strong>desenvolvimento, lançamento e gestão de marcas próprias</strong> de cosméticos e produtos de saúde —, convertendo competência técnico-científica em resultado de negócio sustentável, com rigorosa observância dos limites éticos, sanitários e regulatórios da legislação brasileira.</p>
+<h3 class="block-h" style="margin-top:44px">Objetivos específicos</h3>
+<ol class="plain" style="counter-reset:none"><li><strong>Analisar</strong> o mercado de saúde e beleza e sua cadeia de valor — indústria, terceirista, distribuição, varejo, clínica e profissional —, identificando oportunidades de posicionamento.</li><li><strong>Aplicar</strong> a legislação sanitária e os códigos de ética dos conselhos profissionais à comunicação de serviços e de produtos em saúde e beleza.</li><li><strong>Construir</strong> posicionamento e arquitetura de marca para serviço, marca pessoal e linha de produtos.</li><li><strong>Estruturar</strong> precificação, margem e portfólio a partir de custos reais, da cadeia de canal e do valor percebido.</li><li><strong>Conduzir</strong> o desenvolvimento de um produto de marca própria, do briefing técnico ao plano de lançamento, com sustentação de claims.</li><li><strong>Planejar</strong> canais de distribuição e vendas — B2B, varejo, e-commerce e magistral — e as ações de trade correspondentes.</li><li><strong>Planejar e produzir</strong> conteúdo, campanhas e mídia, online e offline, adequados às políticas das plataformas, aos veículos contratados e à regulação do setor.</li><li><strong>Desenhar</strong> processos de captação, atendimento, conversão, retenção e gestão de reputação.</li><li><strong>Interpretar</strong> indicadores de marketing e financeiros para fundamentar decisão gerencial.</li><li><strong>Elaborar</strong> plano de marketing aplicado a um negócio, serviço ou produto real do setor.</li></ol></div></div></div></section>
+<section class="sec " id="publico"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">06</span><h2 class="d2">Público-alvo e possibilidades de atuação</h2>
+<p class="lede">Profissionais de saúde, estética, cosméticos, gestão e marketing.</p>
+</div><div class="sec-body rise"><p class="lede" style="margin-bottom:34px">Duas famílias profissionais, reunidas na mesma turma. Compartilham a maior parte do conteúdo e se diferenciam pelo objeto de aplicação.</p>
+<div class="split">
+<div><h3 class="block-h">Família A <span class="tag">Serviço</span></h3><div class="persona"><b>Autônomo em início de carreira</b><span>Biomédico esteta, esteticista, dentista, fisioterapeuta dermatofuncional. Depende de indicação e não tem método de captação.</span></div><div class="persona"><b>Proprietário de clínica ou salão</b><span>De dois a dez colaboradores. Fatura, mas não conhece o custo real do procedimento nem a margem por serviço.</span></div><div class="persona"><b>Profissional que busca referência técnica</b><span>Quer construir autoridade sem recorrer a promessa de resultado ou a publicidade fora da regra.</span></div></div>
+<div><h3 class="block-h">Família B <span class="tag">Produto</span></h3><div class="persona"><b>Químico ou farmacêutico com marca própria</b><span>Domina a formulação e não domina lançamento, precificação e distribuição.</span></div><div class="persona"><b>Gestor de produto e brand manager</b><span>Atua ou pretende atuar em indústria cosmética, terceirista ou private label, conduzindo portfólio.</span></div><div class="persona"><b>Farmacêutico magistral e proprietário de farmácia</b><span>Precisa comunicar-se com o prescritor e captar o paciente final, dentro dos limites da divulgação de manipulado.</span></div></div>
+</div>
+<h3 class="block-h" style="margin-top:46px">O que une as duas famílias</h3>
+<p>Todos são profissionais técnico-científicos que precisam comunicar e vender sob regulação — conselho profissional, vigilância sanitária e responsabilidade técnica. É esse o eixo do curso.</p>
+<h3 class="block-h" style="margin-top:46px">Possibilidades de atuação do egresso</h3>
+<div class="chips"><span class="chip">Clínica e consultório próprios</span><span class="chip">Gestão de marketing em clínicas e redes</span><span class="chip">Farmácia magistral e de manipulação</span><span class="chip">Indústria cosmética e terceiristas</span><span class="chip">Distribuição e varejo do setor</span><span class="chip">Consultoria e docência em áreas correlatas</span></div>
+<p class="src">O ingresso observa os critérios aplicáveis aos cursos de pós-graduação <em>lato sensu</em> e as normas internas da instituição, a serem definidos pela coordenação acadêmica.</p></div></div></div></section>
+<section class="sec " id="diferenciais"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">07</span><h2 class="d2">Diferenciais e competências desenvolvidas</h2>
+<p class="lede">O que distingue esta proposta de um curso de marketing generalista.</p>
+</div><div class="sec-body rise"><div class="pillars" style="margin-bottom:46px">
+<div class="pillar"><h4>Aplicação prática</h4><p>Cada módulo termina com uma entrega construída sobre os dados reais do negócio do aluno, não sobre caso fictício. As doze entregas compõem o Projeto Aplicado.</p></div>
+<div class="pillar"><h4>Visão integrada</h4><p>Serviço e produto tratados no mesmo curso e na mesma turma, porque é o mesmo profissional que transita entre os dois ao longo da carreira.</p></div>
+<div class="pillar"><h4>Eixo regulatório</h4><p>Conformidade com conselhos profissionais e regulação sanitária como conteúdo obrigatório e transversal, não como observação lateral.</p></div>
+<div class="pillar"><h4>Gestão orientada a resultado</h4><p>Custo, margem, indicadores e decisão gerencial tratados com o mesmo peso dado à comunicação.</p></div>
+</div>
+<h3 class="block-h">Competências desenvolvidas</h3>
+<ul class="plain"><li>Traduzir conhecimento técnico-científico em comunicação compreensível e lícita</li><li>Reconhecer os limites éticos, sanitários e jurídicos da publicidade em saúde e decidir dentro deles</li><li>Formar preço a partir de custo real e sustentar valor em vez de desconto</li><li>Levar um produto do conceito ao canal, com claims sustentados</li><li>Operar captação digital, mídia paga e mídia offline com orçamento definido</li><li>Construir autoridade profissional sem recorrer a promessa de resultado</li><li>Ler os indicadores do negócio e decidir com base neles</li></ul>
+<h3 class="block-h" style="margin-top:46px">Perfil do egresso</h3>
+<p>Profissional apto a assumir a <strong>direção de marketing de um negócio de saúde e beleza</strong> ou a <strong>gestão de produto e de marca própria</strong> no setor — no próprio consultório, clínica ou farmácia, ou como brand manager e gestor de portfólio em indústria cosmética, terceirista ou farmácia de manipulação.</p></div></div></div></section>
+<section class="sec " id="matriz"><div class="wrap"><div class="sec-grid wide">
+<div class="sec-head rise">
+<span class="secno">08</span><h2 class="d2">Estrutura Acadêmica e Matriz Curricular</h2>
+<p class="lede">Os doze módulos do curso, com ementa, conteúdo programático e entregável.</p>
+</div><div class="sec-body rise"><div class="matriz-top">
+<p>Doze módulos mensais, 30 horas cada, na sequência pedagógica original.<br>Clique em um módulo para ver a ementa, o conteúdo programático e o entregável.</p>
+<button class="btn" id="expandAll" type="button" aria-expanded="false">Expandir todos os módulos</button>
+</div>
+<div id="modlist"><details class="mod" id="m01"><summary><span class="mod-num">01</span><span class="mod-ttl">Mercado, Cadeia de Valor e Consumidor de Saúde e Beleza</span><span class="mod-meta">Março<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Panorama econômico do setor de saúde e beleza no Brasil. Estrutura da cadeia produtiva e distribuição de margem entre os elos. Comportamento do consumidor de procedimento e de produto. Jornada de compra e pontos de decisão. Sazonalidade e ticket médio. Segmentação e identificação de nichos.</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>Dimensão e dinâmica do mercado brasileiro de saúde e beleza. Os subsetores e como se relacionam. A cadeia de valor completa — indústria, terceirista, envasador, distribuidor, representante, varejo, farmácia, clínica, profissional autônomo — e onde fica a margem em cada elo. Serviço como bem de confiança e produto como bem de experiência: por que isso muda tudo no marketing.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>A praça e o raio real de deslocamento do cliente. Densidade e concorrência no entorno. O consumidor de procedimento: autoimagem, motivação, medo, ciclo de decisão e tempo de maturação. Jornada do paciente-cliente, do primeiro contato à recompra. Sazonalidade da agenda. Ticket médio e frequência por tipo de procedimento. Quem é o cliente que dá lucro e quem é o que dá prejuízo.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>O consumidor de cosmético: hábito, rotina, substituição e fidelidade de marca. Categorias e subcategorias do mercado. O profissional de saúde como influenciador de compra e como canal. Curva de adoção de ativo novo. Sazonalidade de categoria. Sell-in e sell-out: por que quem consome a marca não é quem paga a primeira nota fiscal.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Diagnóstico do próprio negócio: posição na cadeia, concorrentes reais, público atendido hoje, sazonalidade observada. Construção do mapa da jornada, marcando os pontos em que o cliente desiste.</p></li></ol><p class="mod-ent"><b>Entregável</b>Diagnóstico de negócio e mapa da jornada do cliente.</p></div></details><details class="mod" id="m02"><summary><span class="mod-num">02</span><span class="mod-ttl">Marketing Ético e Regulatório em Saúde e Beleza</span><span class="mod-meta">Abril<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>As três camadas de regra que incidem sobre a comunicação do setor: código de ética do conselho profissional, regulação sanitária e defesa do consumidor. Publicidade de serviço de saúde e publicidade de produto. Uso de imagem. Sustentação de claims. Proteção de dado sensível. Responsabilidade civil e profissional pela comunicação.</p><p class="mod-note" style="margin-top:14px;font-style:normal;color:var(--gold);font-size:.86rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600">módulo-âncora</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>Por que a publicidade em saúde é regulada e qual o bem jurídico protegido. As três camadas de regra e como se sobrepõem. Publicidade, divulgação técnica e conteúdo educativo: onde está a fronteira. O conceito de promessa de resultado como centro do risco. Responsabilidade do profissional pelo conteúdo produzido por terceiros — agência, social media, influenciador. LGPD e dado de saúde como dado sensível: base legal, consentimento e guarda.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>Os códigos de ética e a publicidade por profissão — medicina, odontologia, farmácia, biomedicina, enfermagem, nutrição, química e estética: o que cada conselho permite, o que veda e o que deixa em zona cinzenta. Antes-e-depois: hipóteses de uso, ressalvas e termo de autorização de imagem. Sensacionalismo, autopromoção e concorrência desleal. Divulgação de preço e de promoção em serviço de saúde. Comunicação de equipamento e de técnica. O que caracteriza invasão de competência e exercício ilegal na comunicação.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>Classificação de risco de cosméticos e o que muda entre notificação e registro. Rotulagem obrigatória e informação ao consumidor. Claims: que evidência sustenta qual frase, o que é claim terapêutico vedado a cosmético, o que exige ensaio. Dossiê de produto e documentação de suporte. Material promocional e publicidade de produto. Responsabilidade técnica e o papel do RT. Produto importado e produto de terceirista: de quem é a responsabilidade. Comunicação na farmácia magistral e a vedação de publicidade de manipulado.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Auditoria de conformidade do próprio material: perfis sociais, site, material impresso, rótulo, anúncio ativo. Cada peça classificada em verde, amarelo ou vermelho, com plano de correção e prazo.</p></li></ol><p class="mod-note">Pede dois docentes: advogado de direito médico e sanitário, e um responsável técnico com vivência de registro. O conteúdo precisa ser revisado contra os textos vigentes a cada turma — é o módulo em que não se pode errar, porque é a promessa central do curso.</p><p class="mod-ent"><b>Entregável</b>Auditoria de conformidade e plano de correção.</p></div></details><details class="mod" id="m03"><summary><span class="mod-num">03</span><span class="mod-ttl">Marca: Posicionamento, Arquitetura e Marca Pessoal</span><span class="mod-meta">Maio<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Segmentação, nicho e proposta de valor. Posicionamento e diferenciação. Identidade verbal e visual. Arquitetura de marca aplicada a serviço, pessoa e produto. Construção de autoridade científica. Registro de marca. Gestão de reputação.</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>Segmentação, nicho e o custo de querer atender todo mundo. Proposta de valor e diferenciação. Posicionamento como escolha do que não ser. Arquétipos de marca. Naming e registro no INPI: classes, busca de anterioridade, risco de usar um nome já registrado. Identidade verbal e tom de voz para quem fala de ciência. Briefing de identidade visual: o que o designer precisa receber.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>Marca pessoal do profissional de saúde: por que, nesse setor, a pessoa é o produto — e o risco que isso cria. Marca pessoal e marca da clínica: quando unir, quando separar, e o perigo de um negócio que não sobrevive à saída do sócio. Construção de autoridade científica: titulação, produção, casuística, dados, didática. Escolha de nicho de especialidade, porque não existe autoridade em tudo. Prova social lícita. Canais de autoridade além da rede social — palestra, congresso, docência, podcast, mídia espontânea, publicação técnica, atuação em associação. Assessoria de imprensa para profissional de saúde. Reputação pessoal e sobre-exposição: o limite entre educar e vender.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>Arquitetura de marca: marca única, marca por linha, submarca, marca endossada. Marca da clínica e marca de produto convivendo. Nome de linha e nome de produto. Portfólio e o papel de cada item — entrada, margem, imagem. Embalagem como suporte de marca. Private label e marca de terceirista: de quem é a marca e de quem é a fórmula. Registro por classe. Licenciamento e co-branding com profissional de referência.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Preenchimento da plataforma de marca: nicho, proposta de valor, arquétipo, tom de voz, arquitetura escolhida e justificada. Checagem de disponibilidade do nome.</p></li></ol><p class="mod-ent"><b>Entregável</b>Plataforma de marca e definição de arquitetura.</p></div></details><details class="mod" id="m04"><summary><span class="mod-num">04</span><span class="mod-ttl">Custos, Preço, Margem e Indicadores do Negócio</span><span class="mod-meta">Junho<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Estrutura de custo em serviço e em produto. Formação de preço por custo e por valor. Margem de contribuição e ponto de equilíbrio. Cascata de preço no canal. Política de desconto e de reajuste. Indicadores de marketing e financeiros e rotina de decisão.</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>Markup e margem: a confusão que faz empresa lucrativa no papel quebrar no caixa. Custo fixo, variável e margem de contribuição. Ponto de equilíbrio. Formação de preço por custo e por valor percebido. Ancoragem e elasticidade. O impacto real do desconto: quanto volume a mais é preciso vender para compensar 10%, 20% e 30%. Política de reajuste e repasse de custo. Introdução a indicadores e à rotina de decisão gerencial.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>Custo direto do procedimento: insumo, descartável, ativo, amortização de equipamento. Custo de hora-sala e de hora-profissional. Rateio de custo fixo e preço mínimo defensável. Pacote, protocolo e plano de manutenção. Comissão e repasse ao profissional executante. Taxa de ocupação de agenda e o custo do horário vazio. Produtividade por sala e por profissional. DRE da clínica e os indicadores que a governam.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>Custo industrial: formulação, embalagem primária e secundária, rótulo, envase, lote mínimo, perda. Frete e carga tributária. A cascata de preço no canal — custo industrial, preço fábrica, distribuidor, varejo, consumidor — e quanto cada elo precisa ganhar para querer vender o seu produto. Preço sugerido e preço praticado. Mix de portfólio e margem ponderada. Giro, cobertura de estoque e capital imobilizado em lote.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Reprecificação do próprio serviço ou produto na planilha, com os números reais do aluno. Montagem do painel de indicadores que ele vai acompanhar mensalmente.</p></li></ol><p class="mod-ent"><b>Entregável</b>Nova tabela de preços e painel de oito indicadores.</p></div></details><details class="mod" id="m05"><summary><span class="mod-num">05</span><span class="mod-ttl">Conteúdo, Storytelling e Produção para Redes Sociais</span><span class="mod-meta">Julho<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Tradução de conteúdo técnico para linguagem leiga. Arquitetura de conteúdo e calendário editorial. Roteiro e narrativa para vídeo curto. Produção audiovisual com recursos próprios. IA aplicada à produção. Métricas de conteúdo. Limites regulatórios por formato.</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>Tradução do técnico para o leigo sem perder precisão — o problema central de quem vem da ciência. Conteúdo de autoridade e conteúdo de venda: proporção e sequência. Pilares editoriais e linhas de conteúdo. Estrutura narrativa, gancho e retenção. Anatomia de um roteiro de vídeo curto. O que cada formato faz: Reels, carrossel, stories, live, vídeo longo, podcast. IA no roteiro, na legenda, no corte e no reaproveitamento. Métricas que indicam negócio e métricas que só alimentam vaidade. Limites do conselho aplicados formato por formato.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>Conteúdo de procedimento e de educação do paciente. Como mostrar resultado dentro da regra. Bastidor de atendimento. Depoimento e relato de caso. O conteúdo que atrai o cliente certo e o que atrai caçador de desconto. Produção no consultório: luz, áudio, enquadramento, fundo, roupa. A rotina que funciona para quem atende oito horas por dia — bloco único de gravação mensal, não produção diária.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>Conteúdo de produto: ativo, textura, aplicação, resultado. Still, macro e vídeo de uso. Conteúdo técnico dirigido ao profissional e conteúdo de consumo dirigido ao paciente — dois públicos, duas linguagens. Conteúdo científico de sustentação de claim. Conteúdo de lançamento. Material para o canal e para o prescritor. Conteúdo gerado por usuário e review: como estimular sem comprar elogio.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Gravação ao vivo, cada aluno no próprio espaço de trabalho, com correção de luz, áudio e enquadramento em tempo real — aplicação que um estúdio de aula não reproduz. Montagem do calendário editorial de 90 dias.</p></li></ol><p class="mod-ent"><b>Entregável</b>Calendário de 90 dias e seis peças gravadas.</p></div></details><details class="mod" id="m06"><summary><span class="mod-num">06</span><span class="mod-ttl">Planejamento de Mídia e Custos de Mídia — online e offline</span><span class="mod-meta">Agosto<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Planejamento de mídia e definição de verba. Métricas e moeda de negociação. Veículos offline: televisão, rádio, mídia exterior, impresso, ponto de venda e eventos. Negociação com veículos. Formas de compra. Mensuração de mídia offline. Integração entre online e offline.</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>O papel da mídia no plano e a diferença entre objetivo de mídia e objetivo de marketing. Verba: como definir — percentual do faturamento, por objetivo, por participação — e como ratear entre canais. Cobertura, frequência e continuidade. A moeda da mídia: alcance, GRP e TRP, CPM, custo por ponto, CPV, share of voice, afinidade. Como ler a tabela de preço de um veículo. Negociação: tabela e preço praticado, desconto de agência, bonificação, permuta, pacote — e qual o poder de barganha real de um anunciante pequeno. Agência, compra direta ou representante de veículo. Mensuração de offline: cupom, número exclusivo por veículo, landing dedicada, lift de busca orgânica, pesquisa de recall, teste geográfico com praça de controle. Restrição regulatória na mídia offline em saúde.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>Mídia local: rádio de bairro e testemunhal de locutor, que converte muito em saúde de proximidade. Televisão regional como opção viável para clínica de praça única. Mídia exterior no entorno — outdoor, mobiliário urbano, painel digital, elevador e condomínio, busdoor. Revista de condomínio e jornal local. Mala direta geográfica. Patrocínio de evento de bairro e de associação. Parceria e permuta local. Como montar um plano de mídia de clínica com verba pequena e ainda conseguir medir.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>Mídia de cobertura: televisão aberta e fechada, faixa horária, patrocínio e merchandising em programa. Rádio em rede. Mídia exterior de cobertura. Revista segmentada, publicação de conselho e mídia científica dirigida ao prescritor. Mídia de ponto de venda e encarte de rede de farmácia. Patrocínio de congresso e feira do setor. Verba de lançamento e verba de sustentação: proporções e duração.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Construção do plano de mídia próprio: objetivo, praça, período, veículos, formatos, verba por canal e a forma de mensuração de cada um.</p></li></ol><p class="mod-ent"><b>Entregável</b>Plano de mídia com orçamento e plano de mensuração.</p></div></details><details class="mod" id="m07"><summary><span class="mod-num">07</span><span class="mod-ttl">Mídia Paga, Tráfego Local e Performance</span><span class="mod-meta">Setembro<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Estrutura de campanhas em plataformas de mídia paga. Políticas de publicidade aplicadas a saúde e beleza. Públicos, criativos e testes. Tráfego geolocalizado e presença local. Mídia para e-commerce e catálogo. Indicadores de performance e ponto de corte.</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>Estrutura de conta e de campanha. Objetivo de campanha e o que cada um realmente otimiza. Públicos frio, morno, quente e semelhante. Criativo e teste: o que testar e em que ordem. Orçamento, fase de aprendizado e escala. Políticas de publicidade das plataformas para saúde e beleza — e como não tomar bloqueio de conta. Conta bloqueada: prevenção, recurso e plano B. Pixel, API de conversão e LGPD. CAC, LTV, ROAS, payback e ponto de corte de uma campanha. IA na análise de resultado.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>Campanha geolocalizada: raio, exclusão de área, público local. Google Business Profile completo — categorias, serviços, fotos, posts, perguntas, agendamento. Captação sistemática e resposta de avaliações, e o peso delas na decisão local. SEO local e página por procedimento e por bairro. Clique-para-WhatsApp como destino. Campanha de inauguração e de nova unidade. Formulário e conversa: qual converte melhor em saúde. Métricas de serviço: custo por avaliação agendada, taxa de comparecimento, conversão em procedimento. O que dá para medir com verba pequena.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>Campanha de e-commerce e catálogo de produto. Feed e saúde do catálogo. Marketplace e mídia dentro do marketplace. Retargeting de carrinho e de visualização. Campanha de lançamento e campanha de recompra. Assinatura e clube. Campanha B2B para captar clínica e revendedor. Métricas de produto: custo de aquisição, ticket, taxa de recompra e margem após mídia.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Campanha real estruturada e publicada antes do fim do encontro, com verba de teste definida e critério de leitura de resultado combinado.</p></li></ol><p class="mod-ent"><b>Entregável</b>Campanha no ar com verba de teste.</p></div></details><details class="mod" id="m08"><summary><span class="mod-num">08</span><span class="mod-ttl">Funil, CRM, Atendimento e Retenção</span><span class="mod-meta">Outubro<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Desenho de funil para decisão de alto envolvimento. CRM e registro de relacionamento. Venda consultiva e tratamento de objeção. Experiência e pós-atendimento. Retenção e recompra. Gestão de reputação e protocolo de crise.</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>Desenho de funil para decisão de alto envolvimento. Etapas, gargalo e taxa de passagem. CRM: o que registrar e para quê. Atendimento humano e automatizado — onde automatizar ajuda e onde destrói confiança. Venda consultiva e diagnóstico de necessidade. Objeção de preço, de medo e de tempo. Expectativa irreal e o dever ético de recusar. Experiência e pós-atendimento. Avaliações públicas e resposta a reclamação. Influenciadores e permuta: critérios, contrato e risco. Protocolo de crise — resultado insatisfatório, reação adversa, exposição negativa, recall.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>WhatsApp como canal principal: tempo de resposta, roteiro, qualificação. A consulta de avaliação como etapa de decisão, não como formalidade. Orçamento e follow-up sem perseguição. Falta e remarcação: política e redução. Reativação de base inativa. Recorrência de manutenção e plano de acompanhamento. Programa de indicação. Pesquisa de satisfação. A equipe que atende e precisa vender: treinamento e incentivo.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>Funil B2B: prospecção, carteira, ciclo de venda longo, proposta e negociação. Representante e distribuidor como parte do funil. Pós-venda de canal e giro no cliente — vender para o canal não é vender ao consumidor. Recompra e assinatura no direto ao consumidor. Atendimento de SAC e de notificação de reação adversa. Relacionamento com o prescritor na farmácia magistral. Gestão de reputação de marca de produto.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Desenho do fluxo de atendimento ponta a ponta e redação dos scripts, com dramatização em dupla para testar objeção real.</p></li></ol><p class="mod-ent"><b>Entregável</b>Fluxo de atendimento e oito scripts.</p></div></details><details class="mod" id="m09"><summary><span class="mod-num">09</span><span class="mod-ttl">Canais, Distribuição, Política Comercial e Trade</span><span class="mod-meta">Novembro<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Desenho e seleção de canais. Intermediação, cobertura e capilaridade. Política comercial e conflito de canal. Estrutura e remuneração de força de vendas. Trade marketing e ponto de venda. Treinamento de canal.</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>Desenho de canal: qual canal serve qual público e a que custo. Venda direta e venda intermediada. Cobertura, capilaridade e curva de ganho por canal. Conflito de canal — quando o e-commerce próprio briga com o varejo que revende — e como estruturar preço para não matar o parceiro: o erro clássico de marca nova. Política comercial: tabela por canal, prazo, desconto por volume, bonificação, verba de canal, exclusividade territorial. Contrato e documentação. Logística e frete no preço. Estrutura de vendas e remuneração.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>Revenda de cosmético no consultório: margem, mix, exposição, estoque e treinamento da equipe — uma das margens mais altas e mais ignoradas de uma clínica. O profissional como canal de uma marca: o que negociar, que condição pedir, que risco assumir. Parceria local e indicação cruzada. Convênio corporativo e pacote para empresa. Venda de pacote e de protocolo como canal próprio.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>Distribuidor regional, representante autônomo e equipe própria: quando cada um. Varejo físico, rede de farmácia e drogaria. Farmácia magistral como canal. E-commerce próprio e marketplace. Exportação. Trade marketing: gôndola e posicionamento em prateleira, display, encarte de rede, visual merchandising, experimentação e amostragem. Treinamento e argumentário para quem vende no balcão. Patrocínio de congresso e feira como canal comercial. Metas, comissão e gestão de funil B2B.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Desenho do mapa de canais do próprio negócio e redação da política comercial, com tabela diferenciada e regra de conflito.</p></li></ol><p class="mod-ent"><b>Entregável</b>Mapa de canais e política comercial escrita.</p></div></details><details class="mod" id="m10"><summary><span class="mod-num">10</span><span class="mod-ttl">Desenvolvimento de Produto e Marca Própria</span><span class="mod-meta">Dezembro, 1º fim de semana<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Gestão de produto aplicada a saúde e beleza. Identificação de oportunidade e validação de conceito. Caminhos de desenvolvimento e escolha de parceiro produtivo. Briefing técnico. Embalagem. Sustentação de claims e caminho regulatório. Viabilidade econômica do lote.</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>O que faz um gestor de produto. Identificação de oportunidade e validação de conceito antes de gastar com fórmula. O conceito de produto e o papel do briefing. Custo, prazo e risco de cada caminho de desenvolvimento. Propriedade da fórmula e propriedade da marca: o que você leva se trocar de fabricante. Cronograma realista de um lançamento, do conceito à prateleira.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>O protocolo próprio como produto da clínica: nomear, padronizar, registrar como marca e vender como pacote — é o primeiro produto que uma clínica lança, e vem antes de qualquer cosmético. Serviço por assinatura. Curadoria e revenda com marca da clínica. Quando faz sentido ter linha própria e quando é melhor revender a de outro. Parceria com terceirista para linha de clínica em volume pequeno: o que é viável e o que não é.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>Private label, formulação própria e marca compartilhada: custo, controle e exclusividade de cada caminho. Seleção e negociação com terceirista e envasador — capacidade, lote mínimo, prazo, exclusividade, sigilo. O briefing técnico para o laboratório, a peça que liga marketing e P&amp;D. Escolha de ativo e de conceito de fórmula. Embalagem: primária, secundária, custo, fornecedor, lote mínimo. Dossiê e sustentação de claim — que ensaio sustenta qual frase. Caminho regulatório e documentação. Custo de desenvolvimento e ponto de equilíbrio do primeiro lote.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Redação do briefing técnico de um produto real e montagem do cronograma de desenvolvimento, com os pontos de decisão e de custo marcados.</p></li></ol><p class="mod-note">Ponte direta com as pós de Desenvolvimento de Cosméticos e Farmácia Magistral — docente e laboratório que a IEPG já tem.</p><p class="mod-ent"><b>Entregável</b>Briefing técnico de produto e cronograma de lançamento.</p></div></details><details class="mod" id="m11"><summary><span class="mod-num">11</span><span class="mod-ttl">Campanhas, Lançamento e Crescimento</span><span class="mod-meta">Janeiro, último fim de semana<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Anatomia de campanha e calendário sazonal do setor. Oferta de entrada e escada de valor. Promoção e preço. Ocupação de capacidade em serviço. Go-to-market de produto. Métricas de campanha e de lançamento. Caminhos de expansão.</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Conceito comum</div><p>Anatomia de uma campanha: objetivo, público, oferta, mensagem, canal, verba, prazo e mensuração. O calendário sazonal do setor de saúde e beleza. Oferta de entrada e escada de valor. Promoção sem destruir preço — e o que fazer em vez de desconto. Critério de encerramento e de repetição de campanha. Caminhos de crescimento e os pré-requisitos de cada um.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado manhã</b>Lente serviço</div><p>A agenda como ativo: capacidade, ocupação e o custo do horário vazio. Campanha para horário morto, com oferta diferenciada por faixa horária. O calendário do setor na prática — janeiro de recomeço, pré-verão com corpo e depilação, inverno de peeling e laser, Dia das Mães, temporada de noivas, Black Friday, pré-férias. Lançamento de novo procedimento e a campanha que amortiza o equipamento recém-financiado. Campanha de reativação e programa de indicação. Avaliação gratuita: quando converte e quando atrai o cliente errado. Campanha interna para a equipe. Expansão: nova sala, nova unidade, franquia.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado tarde</b>Lente produto</div><p>Go-to-market de linha: preço de entrada, pré-venda e lista de espera, amostragem, kit de lançamento, material de apoio. Sell-in e sell-out, e por que um lançamento pode parecer sucesso na nota e fracassar na prateleira. Lançamento para profissional e lançamento para consumidor final. Campanha de distribuição e de ativação de canal. Métricas de lançamento e critério de descontinuação de produto. Extensão de linha e entrada em nova categoria. Exportação.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Oficina</div><p>Montagem da campanha ou do lançamento do aluno, com verba, calendário, peças previstas e métricas de acompanhamento.</p></li></ol><p class="mod-ent"><b>Entregável</b>Plano de campanha ou de lançamento.</p></div></details><details class="mod" id="m12"><summary><span class="mod-num">12</span><span class="mod-ttl">Summit Saúde &amp; Beleza — Laboratório, Pitch e Banca</span><span class="mod-meta">Fevereiro<br>30 h</span><span class="mod-chev" aria-hidden="true"></span></summary><div class="mod-in"><p class="mod-ementa"><b>Ementa</b>Módulo integrador em formato de evento. Consolidação do Projeto Aplicado, apresentação a banca de avaliadores do setor e painéis com convidados de mercado. Integra os conteúdos dos onze módulos anteriores em uma entrega única e defendida.</p><p class="mod-note" style="margin-top:14px;font-style:normal;color:var(--gold);font-size:.86rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600">evento online de encerramento</p><ol class="prog"><li class="k-comum"><div class="prog-h"><b>Sexta</b>Aberta ao público</div><p>Painéis com convidados do mercado — dono de clínica que escalou, advogado de direito médico, marca de cosmético, gestor de mídia do setor. Vitrine institucional da IEPG e abertura das inscrições da turma seguinte. Transmissão aberta e gratuita.</p></li><li class="k-serv"><div class="prog-h"><b>Sábado</b>Bancada serviço</div><p>Laboratório de campanha de captação: finalização da oferta, do criativo, da campanha e do funil, com consultoria dos avaliadores convidados.</p></li><li class="k-prod"><div class="prog-h"><b>Sábado</b>Bancada produto</div><p>Laboratório de plano de lançamento: finalização do posicionamento, do preço, do canal e do cronograma, com consultoria dos avaliadores convidados.</p></li><li class="k-dom"><div class="prog-h"><b>Domingo</b>Pitch e banca</div><p>Defesa individual do Projeto Aplicado diante de banca mista — dois docentes do curso e um convidado de mercado. Apresentação cruzada entre as duas famílias, premiação e encerramento de turma.</p></li></ol><p class="mod-ent"><b>Entregável</b>Projeto Aplicado defendido em banca.</p></div></details></div>
+<div class="spec" style="margin-top:46px">
+<div><dt>Módulos</dt><dd>12 <small>um por mês, em sequência</small></dd></div>
+<div><dt>Carga por módulo</dt><dd>30 h <small>16 h síncronas e 14 h assíncronas</small></dd></div>
+<div><dt>Total em módulos</dt><dd>360 h <small>cumpre o mínimo sem contar o trabalho final</small></dd></div>
+<div><dt>Projeto Aplicado</dt><dd>40 h <small>orientação, elaboração e banca</small></dd></div>
+<div><dt>Carga total</dt><dd>400 h <small>soma dos componentes acima</small></dd></div>
+</div>
+<p class="src">A sequência, os nomes dos módulos, as cargas horárias e os conteúdos programáticos são os do projeto original e não foram alterados nesta apresentação.</p></div></div></div></section>
+<section class="sec " id="metodologia"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">09</span><h2 class="d2">Metodologia, modalidade e estrutura acadêmica</h2>
+<p class="lede">Como o curso funciona na prática: o encontro, o mês e o ano.</p>
+</div><div class="sec-body rise"><h3 class="block-h">Princípio metodológico</h3>
+<p>O conteúdo de cada módulo é ministrado em <strong>duas lentes — serviço e produto —</strong>, lado a lado, porque a lógica é a mesma e muda apenas o objeto de aplicação. A bifurcação ocorre somente na oficina prática, quando cada aluno aplica ao próprio negócio.</p>
+<p>Nenhum aluno perde conteúdo: o profissional de serviço que venha a lançar uma linha já viu o caminho, e o de produto compreende a clínica, que é o canal dele.</p>
+<h3 class="block-h" style="margin-top:46px">O encontro mensal</h3>
+<div class="we"><div class="we-row"><div class="we-when"><b>Sexta</b>19h30 — 22h30</div><div class="we-what"><span class="lens l-comum">Conceito comum</span><p>A lógica que vale para serviço e produto, com caso de abertura. Toda a turma reunida.</p></div></div><div class="we-row"><div class="we-when"><b>Sábado manhã</b>9h — 12h30</div><div class="we-what"><span class="lens l-serv">Lente serviço</span><p>Aplicação a consultório, clínica e salão. Toda a turma assiste.</p></div></div><div class="we-row"><div class="we-when"><b>Sábado tarde</b>14h — 17h30</div><div class="we-what"><span class="lens l-prod">Lente produto</span><p>Aplicação a marca, linha e canal. Toda a turma assiste.</p></div></div><div class="we-row"><div class="we-when"><b>Domingo</b>9h — 12h30</div><div class="we-what"><span class="lens l-comum">Oficina e apresentação cruzada</span><p>A turma se divide em duas salas simultâneas. Cada aluno aplica ao objeto que tem hoje; ao final, cada grupo apresenta para o outro.</p></div></div></div>
+<p class="src">16 horas síncronas por módulo, em blocos de no máximo três horas e meia, com intervalo regular.</p>
+<h3 class="block-h" style="margin-top:46px">O mês completo</h3>
+<p>O encontro é o centro do módulo, não a sua totalidade. A preparação antecede e a aplicação sucede o fim de semana.</p><div class="tbl"><table><thead><tr><th>Quando</th><th>O que</th><th>Horas</th></tr></thead><tbody><tr><td>Duas semanas antes</td><td>Trilha de preparação: videoaula de base, leitura e diagnóstico do próprio negócio preenchido</td><td class="num">4</td></tr><tr><td>Fim de semana</td><td>Encontro ao vivo — sexta, sábado e domingo</td><td class="num">16</td></tr><tr><td>Quarta seguinte</td><td>Check-in de uma hora com o docente do módulo, sobre a implementação</td><td class="num">1</td></tr><tr><td>Três semanas seguintes</td><td>Tarefa aplicada ao próprio negócio e postagem do resultado na comunidade</td><td class="num">9</td></tr></tbody><tfoot><tr><td colspan="2">Por módulo</td><td>30 h</td></tr></tfoot></table></div>
+<p class="src">O check-in da quarta-feira seguinte é o mecanismo que sustenta a aplicação: sem ele, o aluno retoma a rotina e o módulo se encerra no domingo.</p>
+<h3 class="block-h" style="margin-top:46px">Matriz de carga horária</h3><div class="tbl"><table><thead><tr><th>Componente</th><th>Síncrono</th><th>Assíncrono</th><th>Total</th></tr></thead><tbody><tr><td>12 módulos × 30 h</td><td class="num">192 h</td><td class="num">168 h</td><td class="num">360 h</td></tr><tr><td>Projeto Aplicado — orientação e banca</td><td class="num">8 h</td><td class="num">32 h</td><td class="num">40 h</td></tr></tbody><tfoot><tr><td>Total do curso</td><td class="num">200 h</td><td class="num">200 h</td><td class="num">400 h</td></tr></tfoot></table></div>
+<p class="src">As 360 horas em módulos cumprem o mínimo de <em>lato sensu</em> sem depender do trabalho final — caminho mais seguro na análise de credenciamento, já que o trabalho de conclusão em geral não é computado nesse piso.</p>
+<h3 class="block-h" style="margin-top:46px">Calendário da turma</h3>
+<p>Turma de março a fevereiro, com encontros no terceiro fim de semana de cada mês. Três ajustes são necessários porque caem em períodos de pico de faturamento do público — se o encontro cair neles, a turma não comparece.</p><div class="tbl"><table><thead><tr><th>Mês</th><th>Ajuste</th><th>Motivo</th></tr></thead><tbody><tr><td><strong>Maio</strong> · M03</td><td>1º fim de semana</td><td>O 2º domingo é Dia das Mães — pico de faturamento de clínica e salão</td></tr><tr><td><strong>Dezembro</strong> · M10</td><td>1º fim de semana</td><td>De 15 a 31/12 o setor está em pico absoluto</td></tr><tr><td><strong>Janeiro</strong> · M11</td><td>Último fim de semana</td><td>Depois das férias escolares e do recesso</td></tr><tr><td><strong>Novembro</strong> · M09</td><td>Antecipar se possível</td><td>Black Friday e pré-verão</td></tr><tr><td><strong>Fevereiro</strong> · M12</td><td>Ajustar ao Carnaval</td><td>Data móvel; conferir ano a ano</td></tr></tbody></table></div>
+<h3 class="block-h" style="margin-top:46px">Acompanhamento e retenção</h3>
+<p style="margin-bottom:28px">A modalidade online ao vivo exige mecanismos explícitos de permanência. Quatro deles estão previstos no desenho.</p>
+<div class="pillars"><div class="pillar"><h4>Grupos fixos de cinco</h4><p>Do módulo 1 ao 12, mistos — dois de produto, três de serviço. Fazem a oficina juntos, cobram entrega um do outro e apresentam juntos. É o fator que mais pesa em conclusão de curso online, mais do que qualquer plataforma.</p></div><div class="pillar"><h4>Gravação liberada por sete dias</h4><p>Contraintuitivo, mas acesso permanente produz o "vejo depois" que nunca chega. O prazo curto mantém a aula ao vivo como o evento.</p></div><div class="pillar"><h4>Câmera aberta nas oficinas</h4><p>Pactuada no primeiro dia, com presença pesando na avaliação. Sem isso, o domingo vira uma sala de avatares.</p></div><div class="pillar"><h4>Monitor ou tutor por turma</h4><p>A pessoa que puxa quem sumiu na terceira semana. Em curso online isso não é luxo administrativo — é o que segura a taxa de conclusão.</p></div></div></div></div></div></section>
+<section class="sec " id="aplicacao"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">10</span><h2 class="d2">Aplicação prática e resultados de aprendizagem</h2>
+<p class="lede">O que o aluno constrói, módulo a módulo, e como é avaliado.</p>
+</div><div class="sec-body rise"><p class="lede" style="margin-bottom:34px">Cada módulo produz uma peça do plano de marketing do próprio aluno. Ao fim do curso, o Projeto Aplicado já está construído — não é trabalho adicional, é a consolidação do que foi feito.</p>
+<h3 class="block-h">Resultados de aprendizagem por módulo</h3>
+<div class="tbl"><table><thead><tr><th>Mód.</th><th>Módulo</th><th>Entregável</th></tr></thead><tbody><tr><td class="num">01</td><td><strong>Mercado, Cadeia de Valor e Consumidor de Saúde e Beleza</strong></td><td>Diagnóstico de negócio e mapa da jornada do cliente</td></tr><tr><td class="num">02</td><td><strong>Marketing Ético e Regulatório em Saúde e Beleza</strong></td><td>Auditoria de conformidade e plano de correção</td></tr><tr><td class="num">03</td><td><strong>Marca: Posicionamento, Arquitetura e Marca Pessoal</strong></td><td>Plataforma de marca e definição de arquitetura</td></tr><tr><td class="num">04</td><td><strong>Custos, Preço, Margem e Indicadores do Negócio</strong></td><td>Nova tabela de preços e painel de oito indicadores</td></tr><tr><td class="num">05</td><td><strong>Conteúdo, Storytelling e Produção para Redes Sociais</strong></td><td>Calendário de 90 dias e seis peças gravadas</td></tr><tr><td class="num">06</td><td><strong>Planejamento de Mídia e Custos de Mídia — online e offline</strong></td><td>Plano de mídia com orçamento e plano de mensuração</td></tr><tr><td class="num">07</td><td><strong>Mídia Paga, Tráfego Local e Performance</strong></td><td>Campanha no ar com verba de teste</td></tr><tr><td class="num">08</td><td><strong>Funil, CRM, Atendimento e Retenção</strong></td><td>Fluxo de atendimento e oito scripts</td></tr><tr><td class="num">09</td><td><strong>Canais, Distribuição, Política Comercial e Trade</strong></td><td>Mapa de canais e política comercial escrita</td></tr><tr><td class="num">10</td><td><strong>Desenvolvimento de Produto e Marca Própria</strong></td><td>Briefing técnico de produto e cronograma de lançamento</td></tr><tr><td class="num">11</td><td><strong>Campanhas, Lançamento e Crescimento</strong></td><td>Plano de campanha ou de lançamento</td></tr><tr><td class="num">12</td><td><strong>Summit Saúde &amp; Beleza — Laboratório, Pitch e Banca</strong></td><td>Projeto Aplicado defendido em banca</td></tr></tbody></table></div>
+<h3 class="block-h" style="margin-top:46px">Projeto Aplicado</h3>
+<p>Plano de marketing de um negócio, serviço ou produto real, consolidando as doze entregas mensais. A orientação começa a partir do sexto módulo e a defesa ocorre em banca, no módulo de encerramento.</p>
+<p>O aluno da Família A entrega um plano de captação e crescimento; o da Família B, um plano de lançamento de marca.</p>
+<h3 class="block-h" style="margin-top:46px">Sistema de avaliação</h3>
+<div class="pillars">
+<div class="pillar"><h4>Por módulo</h4><p>Entregável prático aplicado ao próprio negócio, apresentado na oficina de domingo. A presença nos encontros síncronos compõe a avaliação, com peso a definir em regulamento.</p></div>
+<div class="pillar"><h4>Projeto Aplicado</h4><p>Plano de marketing completo, avaliado quanto à consistência regulatória, à viabilidade financeira, à coerência entre oferta e canal e à qualidade de execução.</p></div>
+<div class="pillar"><h4>Banca</h4><p>Composição proposta: dois docentes do curso e um convidado do mercado, de modo a atender ao requisito de titulação sem perder a avaliação externa.</p></div>
+</div>
+<h3 class="block-h" style="margin-top:46px">Material e instrumentos do aluno</h3>
+<p style="margin-bottom:30px">Além do material didático de cada módulo — videoaulas, apostila, slides e estudo de caso —, o curso entrega instrumentos de trabalho preenchidos em oficina, com o docente presente. Vinte e seis instrumentos estão previstos.</p>
+<div class="kit"><div><h4>Conformidade — material âncora</h4><ul><li>Semáforo de publicidade em saúde: checklist verde, amarelo e vermelho por conselho profissional</li><li>Termo de autorização de uso de imagem para antes-e-depois</li><li>Política de privacidade e termo de consentimento LGPD para clínica</li><li>Template de dossiê de claims cosméticos</li></ul></div><div><h4>Financeiro e gestão</h4><ul><li>Planilha de precificação de procedimento: custo direto, hora-sala, margem</li><li>Planilha de custo industrial e cascata de preço no canal</li><li>Calculadora de CAC, LTV e ROAS</li><li>DRE simplificado e painel de indicadores</li><li>Planilha de ocupação de agenda e de giro de estoque</li></ul></div><div><h4>Conteúdo e mídia</h4><ul><li>Calendário editorial sazonal de 12 meses do setor</li><li>Banco de ganchos e roteiros de vídeo curto para saúde e estética</li><li>Swipe file de anúncios aprovados no setor</li><li>Guia de estúdio de bolso: luz, áudio e enquadramento no consultório</li><li>Templates editáveis de post, carrossel e manual de marca</li><li>Plano de mídia e brief de campanha</li></ul></div><div><h4>Vendas e relacionamento</h4><ul><li>Oito scripts de WhatsApp: primeiro contato, orçamento, objeção de preço, falta, pós-procedimento, reativação, indicação, retorno</li><li>Roteiro de consulta de avaliação que converte</li><li>Matriz de pacotes e combos</li><li>Política comercial e tabela por canal</li></ul></div><div><h4>Produto e canal</h4><ul><li>Template de briefing técnico para o laboratório</li><li>Checklist de seleção e negociação com terceirista</li><li>Plano de lançamento de linha</li><li>Argumentário e material de treinamento de canal</li></ul></div><div><h4>Estratégia</h4><ul><li>Modelo de plano de marketing — a estrutura do Projeto Aplicado</li><li>Prompt pack de IA para saúde e beleza</li><li>Diagnóstico inicial do negócio, revisitado a cada módulo</li></ul></div></div></div></div></div></section>
+<section class="sec " id="implantacao"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">11</span><h2 class="d2">Potencial de implantação e expansão institucional</h2>
+<p class="lede">O que a proposta exige da instituição e o que devolve a ela.</p>
+</div><div class="sec-body rise"><h3 class="block-h">O Summit de encerramento como ativo institucional</h3>
+<p>O décimo segundo módulo é um evento online que acumula três funções: encerra a turma, abriga a banca do Projeto Aplicado e abre a captação da turma seguinte.</p>
+<div class="we" style="margin-top:28px"><div class="we-row"><div class="we-when"><b>Sexta</b>19h30 — 22h30</div><div class="we-what">
             <p>Convidados do mercado, vitrine institucional da IEPG e abertura das inscrições da próxima turma.</p>
-            <span class="open-tag">Aberta ao público, gratuita</span>
-          </div>
-        </div>
-        <div class="day">
-          <div><b>Sábado</b>9h — 19h</div>
-          <div><p>Só alunos. Duas bancadas — campanha de captação e plano de lançamento. Finalização do Projeto Aplicado com consultoria dos avaliadores.</p></div>
-        </div>
-        <div class="day">
-          <div><b>Domingo</b>9h — 13h</div>
-          <div><p>Pitch e banca. Cada aluno defende seu projeto diante de avaliadores do setor. Premiação e encerramento de turma.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cols">
-      <div class="card">
-        <h3>Por que a sexta aberta muda a conta</h3>
-        <p>O módulo deixa de ser só custo e passa a ser máquina de captação: leads qualificados, autoridade de marca para a IEPG e alunos atuais virando prova social ao vivo. Começando a turma em março, a sexta cai exatamente na janela de matrícula da turma seguinte.</p>
-      </div>
-      <div class="card">
-        <h3>Receita adicional</h3>
-        <p>Marcas de cosmético, terceiristas e fornecedores de equipamento pagam para estar diante de uma plateia de clínicas e farmácias. O patrocínio do Summit é receita que não existe no modelo de aula.</p>
-      </div>
-      <div class="card">
-        <h3>Banca formal no mesmo evento</h3>
-        <p>O domingo pode servir como defesa formal do Projeto Aplicado, eliminando um evento separado — compondo a banca como dois docentes do curso mais um convidado de mercado, para atender ao requisito de titulação sem perder o olhar externo.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="carga">
-    <span class="sec-no">07</span>
-    <h2>Carga horária e avaliação</h2>
-
-    <h3 style="margin-top:26px">O mês inteiro, não só o fim de semana</h3>
-    <div class="tw">
-      <table>
-        <thead><tr><th>Quando</th><th>O que</th><th>Horas</th></tr></thead>
-        <tbody>
-          <tr><td>Duas semanas antes</td><td>Trilha de preparação: videoaula de base, leitura e diagnóstico do próprio negócio preenchido</td><td class="num">4</td></tr>
-          <tr><td>Fim de semana</td><td>Encontro ao vivo — sexta, sábado e domingo</td><td class="num">16</td></tr>
-          <tr><td>Quarta seguinte</td><td>Check-in de uma hora com o docente do módulo, sobre a implementação</td><td class="num">1</td></tr>
-          <tr><td>Três semanas seguintes</td><td>Tarefa aplicada ao próprio negócio e postagem do resultado na comunidade</td><td class="num">9</td></tr>
-        </tbody>
-        <tfoot><tr><td colspan="2">Por módulo</td><td class="num">30 h</td></tr></tfoot>
-      </table>
-    </div>
-    <p class="note prose">O check-in de quarta é o detalhe que mais importa. Sem ele, o aluno volta para a clínica no domingo e o módulo morre.</p>
-
-    <h3 style="margin-top:40px">Matriz de carga horária</h3>
-    <div class="tw">
-      <table>
-        <thead><tr><th>Componente</th><th>Síncrono</th><th>Assíncrono</th><th>Total</th></tr></thead>
-        <tbody>
-          <tr><td>12 módulos × 30 h</td><td class="num">192 h</td><td class="num">168 h</td><td class="num">360 h</td></tr>
-          <tr><td>Projeto Aplicado — orientação e banca</td><td class="num">8 h</td><td class="num">32 h</td><td class="num">40 h</td></tr>
-        </tbody>
-        <tfoot><tr><td>Total do curso</td><td class="num">200 h</td><td class="num">200 h</td><td class="num">400 h</td></tr></tfoot>
-      </table>
-    </div>
-    <p class="note prose">As 360 h em módulos cumprem o mínimo de lato sensu sem depender do Projeto Aplicado — o caminho seguro no credenciamento, já que o trabalho final em geral não é contado nesse piso.</p>
-
-    <h3 style="margin-top:40px">Sistema de avaliação</h3>
-    <div class="cols">
-      <div class="card">
-        <h3>Por módulo</h3>
-        <p>Entregável prático aplicado ao próprio negócio, apresentado no domingo. Peso da presença nos encontros ao vivo definido no regulamento.</p>
-      </div>
-      <div class="card">
-        <h3>Projeto Aplicado</h3>
-        <p>Plano de marketing de um negócio, serviço ou produto real, consolidando as entregas mensais. Defendido em banca no Summit.</p>
-      </div>
-      <div class="card">
-        <h3>Banca</h3>
-        <p>Dois docentes do curso e um convidado de mercado. Critérios: consistência regulatória, viabilidade financeira, coerência entre oferta e canal, e qualidade da execução.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="docentes">
-    <span class="sec-no">08</span>
-    <h2>Corpo docente</h2>
-    <p class="lead prose" style="margin-top:14px">A grade pede dois perfis que raramente moram na mesma pessoa. É por isso que a maioria dos módulos tem dois docentes dividindo o fim de semana.</p>
-
-    <div class="tw">
-      <table>
-        <thead><tr><th>Perfil</th><th>Módulos</th><th>Observação</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Advogado de direito médico e sanitário</strong></td><td class="num">02</td><td>Contratação prioritária — é o diferencial do curso</td></tr>
-          <tr><td><strong>Responsável técnico com vivência de registro</strong></td><td class="num">02, 10</td><td>Rotulagem, claims, caminho regulatório do produto</td></tr>
-          <tr><td><strong>Marketing com cases no setor</strong></td><td class="num">05, 07, 08</td><td>Conteúdo, mídia paga, funil</td></tr>
-          <tr><td><strong>Planejamento de mídia</strong></td><td class="num">06</td><td>Perfil de agência ou veículo; raro na academia</td></tr>
-          <tr><td><strong>Dono de clínica que escalou</strong></td><td class="num">04, 11 (lente serviço)</td><td>Custo de procedimento, agenda, expansão</td></tr>
-          <tr><td><strong>Indústria cosmética e distribuição</strong></td><td class="num">04, 09, 10, 11 (lente produto)</td><td>A contratação mais difícil da grade</td></tr>
-          <tr><td><strong>Farmacêutico e desenvolvedor de cosméticos</strong></td><td class="num">10</td><td>Já na casa — docentes das pós existentes</td></tr>
-          <tr><td><strong>Mestres e doutores da IEPG</strong></td><td class="num">Metodologia e banca</td><td>Cumprimento do requisito de titulação</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="flagbox">
-      <h3>O formato online resolve o gargalo docente</h3>
-      <p>Era o maior problema da grade: os módulos 6, 9 e 10 pedem gente de indústria cosmética, distribuição, trade e planejamento de mídia — perfil que não mora na cidade e não viaja para dar meio dia de aula. Online, a contratação é de qualquer lugar, por meio turno, sem passagem nem hospedagem. A qualidade melhora justamente nos módulos mais difíceis.</p>
-    </div>
-  </section>
-
-  <section id="calendario">
-    <span class="sec-no">09</span>
-    <h2>Calendário</h2>
-    <p class="lead prose" style="margin-top:14px">Turma de março a fevereiro. O encerramento de uma turma é o lançamento da próxima, todo ano, sem campanha paga adicional.</p>
-
-    <div class="prose" style="margin-top:22px">
-      <p>Regra geral: <strong>terceiro fim de semana de cada mês.</strong> Três exceções são obrigatórias no setor de saúde e beleza, porque caem em pico de faturamento do aluno — se a aula cair nelas, a turma não comparece.</p>
-    </div>
-
-    <div class="tw">
-      <table>
-        <thead><tr><th>Mês</th><th>Ajuste</th><th>Motivo</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Maio</strong> · M03</td><td>1º fim de semana</td><td>O 2º domingo é Dia das Mães — pico de faturamento de clínica e salão</td></tr>
-          <tr><td><strong>Dezembro</strong> · M10</td><td>1º fim de semana</td><td>De 15 a 31/12 o setor está em pico absoluto</td></tr>
-          <tr><td><strong>Janeiro</strong> · M11</td><td>Último fim de semana</td><td>Depois das férias escolares e do recesso</td></tr>
-          <tr><td><strong>Novembro</strong> · M09</td><td>Antecipar se possível</td><td>Black Friday e pré-verão</td></tr>
-          <tr><td><strong>Fevereiro</strong> · M12</td><td>Ajustar ao Carnaval</td><td>Data móvel; conferir ano a ano</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="card" style="margin-top:4px">
-      <h3>O loop anual</h3>
-      <p>Começando em março, o curso encerra em fevereiro — e a sexta aberta do Summit cai na janela de captação da turma que começa em março seguinte. A instituição passa a ter um evento anual próprio que alimenta a matrícula.</p>
-    </div>
-  </section>
-
-  <section id="materiais">
-    <span class="sec-no">10</span>
-    <h2>Materiais e ferramentas do aluno</h2>
-    <p class="lead prose" style="margin-top:14px">O material genérico de marketing não serve a esse público. O material específico de saúde e beleza é o que ninguém mais tem — e no formato de fim de semana ele deixa de ser material de estudo e passa a ser ferramenta de oficina, preenchida em sala com o docente ao lado.</p>
-
-    <h3 style="margin-top:34px">Núcleo por módulo</h3>
-    <div class="prose">
-      <p class="note">Videoaulas · apostila e e-book · slides · mapa mental · <strong>audioaula</strong>, para escutar entre atendimentos — formato muito subestimado nesse público · estudo de caso brasileiro real.</p>
-    </div>
-
-    <h3 style="margin-top:34px">Ferramentas práticas</h3>
-    <div class="kit">
-      <div>
-        <h4>Conformidade — material âncora</h4>
-        <ul>
-          <li>Semáforo de publicidade em saúde: checklist verde, amarelo e vermelho por conselho profissional</li>
-          <li>Termo de autorização de uso de imagem para antes-e-depois</li>
-          <li>Política de privacidade e termo de consentimento LGPD para clínica</li>
-          <li>Template de dossiê de claims cosméticos</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Financeiro e gestão</h4>
-        <ul>
-          <li>Planilha de precificação de procedimento: custo direto, hora-sala, margem</li>
-          <li>Planilha de custo industrial e cascata de preço no canal</li>
-          <li>Calculadora de CAC, LTV e ROAS</li>
-          <li>DRE simplificado e painel de indicadores</li>
-          <li>Planilha de ocupação de agenda e de giro de estoque</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Conteúdo e mídia</h4>
-        <ul>
-          <li>Calendário editorial sazonal de 12 meses do setor</li>
-          <li>Banco de ganchos e roteiros de vídeo curto para saúde e estética</li>
-          <li>Swipe file de anúncios aprovados no setor</li>
-          <li>Guia de estúdio de bolso: luz, áudio e enquadramento no consultório</li>
-          <li>Templates editáveis de post, carrossel e manual de marca</li>
-          <li>Plano de mídia e brief de campanha</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Vendas e relacionamento</h4>
-        <ul>
-          <li>Oito scripts de WhatsApp: primeiro contato, orçamento, objeção de preço, falta, pós-procedimento, reativação, indicação, retorno</li>
-          <li>Roteiro de consulta de avaliação que converte</li>
-          <li>Matriz de pacotes e combos</li>
-          <li>Política comercial e tabela por canal</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Produto e canal</h4>
-        <ul>
-          <li>Template de briefing técnico para o laboratório</li>
-          <li>Checklist de seleção e negociação com terceirista</li>
-          <li>Plano de lançamento de linha</li>
-          <li>Argumentário e material de treinamento de canal</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Estratégia</h4>
-        <ul>
-          <li>Modelo de plano de marketing — a estrutura do Projeto Aplicado</li>
-          <li>Prompt pack de IA para saúde e beleza</li>
-          <li>Diagnóstico inicial do negócio, revisitado a cada módulo</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="retencao">
-    <span class="sec-no">11</span>
-    <h2>Retenção no formato online</h2>
-    <p class="lead prose" style="margin-top:14px">Evasão em curso online ao vivo é estruturalmente maior. Quatro mecanismos resolvem a maior parte.</p>
-
-    <div class="cols">
-      <div class="card">
-        <h3>Grupos fixos de cinco</h3>
-        <p>Do módulo 1 ao 12, mistos — dois de produto, três de serviço. Fazem a oficina juntos, cobram entrega um do outro e apresentam juntos. É o fator que mais pesa em conclusão de curso online, mais do que qualquer plataforma.</p>
-      </div>
-      <div class="card">
-        <h3>Gravação liberada por sete dias</h3>
-        <p>Contraintuitivo, mas acesso permanente produz o "vejo depois" que nunca chega. O prazo curto mantém a aula ao vivo como o evento.</p>
-      </div>
-      <div class="card">
-        <h3>Câmera aberta nas oficinas</h3>
-        <p>Pactuada no primeiro dia, com presença pesando na avaliação. Sem isso, o domingo vira uma sala de avatares.</p>
-      </div>
-      <div class="card">
-        <h3>Monitor ou tutor por turma</h3>
-        <p>A pessoa que puxa quem sumiu na terceira semana. Em curso online isso não é luxo administrativo — é o que segura a taxa de conclusão.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="decisoes">
-    <span class="sec-no">12</span>
-    <h2>Pontos a verificar e decisões pendentes</h2>
-    <p class="lead prose" style="margin-top:14px">Quatro itens para a coordenação resolver antes de qualquer peça de divulgação.</p>
-
-    <div class="pend">
-      <div>
-        <h3>1 · Credenciamento EAD — verificação obrigatória</h3>
-        <p>Pós-graduação lato sensu a distância exige que a instituição esteja credenciada para essa modalidade, em trâmite distinto do credenciamento presencial. É preciso confirmar a situação atual da IEPG <strong>antes</strong> de divulgar o curso como online.</p>
-        <p>Se o credenciamento EAD não estiver em vigor, o caminho usual é ofertar com encontros síncronos sob o credenciamento existente — mas isso depende de análise jurídica da própria instituição, não de uma suposição deste documento.</p>
-      </div>
-      <div>
-        <h3>2 · Composição da banca</h3>
-        <p>Confirmar se uma banca com avaliador externo de mercado atende ao requisito de titulação. A composição proposta — dois docentes do curso mais um convidado — foi desenhada para atender aos dois lados, mas precisa de validação antes de entrar no regulamento.</p>
-      </div>
-      <div>
-        <h3>3 · Posicionamento de preço contra o EAD barato</h3>
-        <p>Online nacional coloca o curso na mesma prateleira dos grandes players de pós a preço baixo. O que separa não é conteúdo, é formato: <strong>ao vivo, com turma, oficina e banca</strong> — não videoaula gravada com prova de múltipla escolha. Isso precisa estar na primeira linha da comunicação, e é o que sustenta um ticket várias vezes maior.</p>
-      </div>
-      <div>
-        <h3>4 · Nome do curso e Summit presencial</h3>
-        <p>Definir o nome entre as três opções da seção 01. E avaliar manter o Summit como o único encontro presencial, em formato de formatura facultativa — curso 100% online com um encontro final presencial opcional aumenta matrícula e fecha o vínculo da turma, sem alterar grade nem carga horária.</p>
-      </div>
-    </div>
-  </section>
-
+            <span class="lens l-prod" style="display:inline-block;margin-top:8px">Aberta ao público, gratuita</span>
+          </div></div><div class="we-row"><div class="we-when"><b>Sábado</b>9h — 19h</div><div class="we-what"><p>Só alunos. Duas bancadas — campanha de captação e plano de lançamento. Finalização do Projeto Aplicado com consultoria dos avaliadores.</p></div></div><div class="we-row"><div class="we-when"><b>Domingo</b>9h — 13h</div><div class="we-what"><p>Pitch e banca. Cada aluno defende seu projeto diante de avaliadores do setor. Premiação e encerramento de turma.</p></div></div></div>
+<p class="src">Começando a turma em março, o curso encerra em fevereiro — e a sexta-feira aberta cai na janela de matrícula da turma que inicia em março seguinte. O encerramento de uma turma passa a ser o lançamento da próxima.</p>
+<div class="note" style="margin-top:34px"><h4>Possibilidades adicionais</h4><p>O evento comporta patrocínio de marcas de cosmético, terceiristas e fornecedores de equipamento, que teriam acesso a uma plateia de clínicas e farmácias. E os módulos podem ser ofertados avulsos como extensão a quem já concluiu o curso.</p><p>Ambas são possibilidades a avaliar, não receitas projetadas.</p></div>
+<h3 class="block-h" style="margin-top:46px">Corpo docente necessário</h3>
+<p style="margin-bottom:26px">A grade requer dois perfis que raramente coincidem na mesma pessoa, razão pela qual a maior parte dos módulos prevê dois docentes dividindo o encontro.</p><div class="tbl"><table><thead><tr><th>Perfil</th><th>Módulos</th><th>Observação</th></tr></thead><tbody><tr><td><strong>Advogado de direito médico e sanitário</strong></td><td class="num">02</td><td>Contratação prioritária — é o diferencial do curso</td></tr><tr><td><strong>Responsável técnico com vivência de registro</strong></td><td class="num">02, 10</td><td>Rotulagem, claims, caminho regulatório do produto</td></tr><tr><td><strong>Marketing com cases no setor</strong></td><td class="num">05, 07, 08</td><td>Conteúdo, mídia paga, funil</td></tr><tr><td><strong>Planejamento de mídia</strong></td><td class="num">06</td><td>Perfil de agência ou veículo; raro na academia</td></tr><tr><td><strong>Dono de clínica que escalou</strong></td><td class="num">04, 11 (lente serviço)</td><td>Custo de procedimento, agenda, expansão</td></tr><tr><td><strong>Indústria cosmética e distribuição</strong></td><td class="num">04, 09, 10, 11 (lente produto)</td><td>A contratação mais difícil da grade</td></tr><tr><td><strong>Farmacêutico e desenvolvedor de cosméticos</strong></td><td class="num">10</td><td>Já na casa — docentes das pós existentes</td></tr><tr><td><strong>Mestres e doutores da IEPG</strong></td><td class="num">Metodologia e banca</td><td>Cumprimento do requisito de titulação</td></tr></tbody></table></div>
+<div class="note"><h4>A modalidade online resolve o principal gargalo</h4><p>Os módulos de mídia, canais e desenvolvimento de produto exigem profissionais de indústria cosmética, distribuição e planejamento de mídia — perfil que dificilmente se desloca para ministrar meio dia de aula presencial. Na modalidade online, a contratação não tem restrição geográfica e pode ser feita por meio turno.</p></div>
+<h3 class="block-h" style="margin-top:46px">Potencial de expansão do portfólio</h3>
+<div class="pillars">
+<div class="pillar"><h4>Diferenciação</h4><p>Ocupa um espaço hoje vazio no portfólio, sem competir com os cursos existentes e sem canibalizar matrículas.</p></div>
+<div class="pillar"><h4>Base de captação própria</h4><p>O primeiro público são os egressos dos cursos atuais, alcançáveis pelos canais que a instituição já mantém.</p></div>
+<div class="pillar"><h4>Reaproveitamento docente</h4><p>Dois módulos podem ser construídos com docentes já vinculados às pós de Assuntos Regulatórios e de Desenvolvimento de Produtos Cosméticos.</p></div>
+<div class="pillar"><h4>Recorrência</h4><p>O Summit anual e a oferta de módulos avulsos criam pontos de contato com o egresso depois da conclusão.</p></div>
+</div></div></div></div></section>
+<section class="sec close" id="proximos"><div class="wrap"><div class="sec-grid">
+<div class="sec-head rise sticky-head">
+<span class="secno">12</span><h2 class="d2">Considerações finais e próximos passos</h2>
+<p class="lede">O que se pede à direção da Faculdade IEPG.</p>
+</div><div class="sec-body rise"><p class="lede" style="margin-bottom:34px;color:#C3D0CA">A proposta está completa como projeto acadêmico. O que se pede à direção é a avaliação sobre avançar para a fase de implantação — e há quatro pontos que precisam de decisão institucional antes de qualquer divulgação.</p>
+<ol class="steps"><li><h4>Credenciamento EAD — verificação obrigatória</h4><p>Pós-graduação lato sensu a distância exige que a instituição esteja credenciada para essa modalidade, em trâmite distinto do credenciamento presencial. É preciso confirmar a situação atual da IEPG <strong>antes</strong> de divulgar o curso como online.</p>
+        <p>Se o credenciamento EAD não estiver em vigor, o caminho usual é ofertar com encontros síncronos sob o credenciamento existente — mas isso depende de análise jurídica da própria instituição, não de uma suposição deste documento.</p></li><li><h4>Composição da banca</h4><p>Confirmar se uma banca com avaliador externo de mercado atende ao requisito de titulação. A composição proposta — dois docentes do curso mais um convidado — foi desenhada para atender aos dois lados, mas precisa de validação antes de entrar no regulamento.</p></li><li><h4>Posicionamento de preço contra o EAD barato</h4><p>Online nacional coloca o curso na mesma prateleira dos grandes players de pós a preço baixo. O que separa não é conteúdo, é formato: <strong>ao vivo, com turma, oficina e banca</strong> — não videoaula gravada com prova de múltipla escolha. Isso precisa estar na primeira linha da comunicação, e é o que sustenta um ticket várias vezes maior.</p></li><li><h4>Nome do curso e Summit presencial</h4><p>Definir o nome entre as três opções da seção 01. E avaliar manter o Summit como o único encontro presencial, em formato de formatura facultativa — curso 100% online com um encontro final presencial opcional aumenta matrícula e fecha o vínculo da turma, sem alterar grade nem carga horária.</p></li></ol>
+<div class="goldrule" style="margin:46px 0 30px"></div>
+<h3 class="d3" style="margin-bottom:18px">Convite</h3>
+<p>Este documento reúne o desenho acadêmico completo: objetivos, perfil do egresso, público, matriz curricular com os doze módulos e seus conteúdos programáticos, metodologia, carga horária, sistema de avaliação, corpo docente necessário e calendário.</p>
+<p>O passo seguinte é a leitura crítica pela coordenação acadêmica e pela direção, com os ajustes que a instituição julgar necessários. <strong>A proposta foi construída para ser discutida e corrigida, não para ser aprovada como está.</strong></p></div></div></div></section>
 </main>
+<footer><div class="wrap">
+<p><strong style="color:var(--green)">Pós-graduação em Marketing em Saúde e Beleza</strong> — proposta acadêmica apresentada à direção da Faculdade IEPG.</p>
+<p>Documento de trabalho, outubro de 2026. Conteúdo não indexado em mecanismos de busca.</p>
+<p>A proposta não possui, nesta data, aprovação institucional, credenciamento específico, corpo docente contratado ou data de oferta definida. Carga horária, modalidade e matriz curricular são proposições sujeitas à validação acadêmica da instituição.</p>
+</div></footer>
 
-<footer>
-  IEPG · Proposta de pós-graduação em Marketing Saúde e Beleza<br>
-  Documento de trabalho para a coordenação · outubro de 2026<br>
-  Grade sujeita a validação de credenciamento e de corpo docente.
-</footer>
+<script>
+(function(){
+  var r = document.documentElement;
+  r.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // reveal on scroll, with an unconditional fallback
+  var rise = [].slice.call(document.querySelectorAll('.rise'));
+  function showAll(){ rise.forEach(function(el){ el.classList.add('in'); }); }
+  if (reduce || !('IntersectionObserver' in window)) { showAll(); }
+  else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+    rise.forEach(function(el){ io.observe(el); });
+    setTimeout(showAll, 2500);
+  }
+
+  // expand / collapse every module
+  var btn = document.getElementById('expandAll');
+  var list = document.getElementById('modlist');
+  if (btn && list){
+    var all = [].slice.call(list.querySelectorAll('details.mod'));
+    function sync(){
+      var open = all.every(function(d){ return d.open; });
+      btn.textContent = open ? 'Recolher todos os módulos' : 'Expandir todos os módulos';
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    btn.addEventListener('click', function(){
+      var open = all.every(function(d){ return d.open; });
+      all.forEach(function(d){ d.open = !open; });
+      sync();
+    });
+    all.forEach(function(d){ d.addEventListener('toggle', sync); });
+    sync();
+  }
+
+  // optional imagery: a plate appears only when its file exists
+  [].slice.call(document.querySelectorAll('.plate[data-src]')).forEach(function(fig){
+    var img = fig.querySelector('img'); if (!img) return;
+    img.addEventListener('load', function(){ fig.hidden = false; });
+    img.addEventListener('error', function(){ fig.remove(); });
+    img.src = fig.getAttribute('data-src');
+  });
+})();
+</script>
 </body>
 </html>
